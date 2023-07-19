@@ -1,0 +1,73 @@
+@media screen and (max-width: 1000px) {
+    /* ページ共通 */
+    h1 {
+      font-size: 1.2rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+    /* サイトタイトル */
+    .site-title {
+      margin-top: 20px;
+    }
+  
+    .site-title a {
+      font-size: 32spx;
+    }
+    /* ヘッダー */
+    #header {
+      max-width: 100%;
+      height: 90px;
+      flex-direction: column;
+      margin-top: 20px;
+      line-height: 40px;
+    }
+  
+    #header li a {
+      font-size: 0.8rem;
+      margin-left: 10px;
+    }
+  
+    #header li:first-child {
+      margin-left: 0;
+    }
+  
+    #header li img.icon {
+      width: 20px;
+      margin-top: 15px;
+    }
+    /* メインビジュアル */
+    .wrapper li {
+      font-size: 1rem;
+    }
+  
+    .point-text {
+      font-size: 1.3rem;
+    }
+  
+    /* kv */
+    .kv {
+      min-width: 100%;
+    }
+  
+    .kv .main-copy {
+      font-size: 30px;
+    }
+  
+    .kv .sub-copy {
+      font-size: 30px;
+    }
+  
+    /* video */
+    .video {
+      /* min-width: 960px; */
+      width: 100%;
+    }
+    .point-p-right {
+      display: none;
+    }
+    .point {
+      display: inline;
+    }
+  }
