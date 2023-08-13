@@ -127,6 +127,7 @@ header .title{
     font-size: 10vw;
     width: 100vw;
     height: 80vh;
+    font-family: fantasy;
 }
 .screen_list{
     display: flex;
@@ -135,6 +136,9 @@ header .title{
     font-size: 10vw;
     width: 100vw;
     height: 80vh;
+    font-family: fantasy;
+    -webkit-text-stroke: var(--header-color) 2px ;
+    color: white;
 }
 /* フッター */
 .copyright{
