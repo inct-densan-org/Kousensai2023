@@ -68,6 +68,31 @@ header .title{
 .Re{
     font-family: serif;
 }
+.burger{
+    z-index: 2;
+    background-color: rgb(100, 169, 199);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+}
+.burger.active{
+    pointer-events: all;
+    opacity: 1;
+    transition: all 0.35s ease;
+}
+.burger ul{
+    margin-top:25% ;
+}
+.burger li{
+    font-size: 1.7rem;
+    line-height: 60px;
+}
 /* 見出し */
 .headline{
     
@@ -216,5 +241,8 @@ div.address {
     }
     .table_element h1{
         font-size: 1.4rem;
+    }
+    header .nav{
+        font-size: xx-large;
     }
   }
