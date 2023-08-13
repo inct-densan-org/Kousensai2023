@@ -13,6 +13,7 @@
     --footer-color-deep : #000461;
     --header-color : #0093D6;
     --nav-color : rgba(0,147,214,0.6);
+    --nav-font-size:x-large;
 }
 /* ページの共通部分 */
 html {
@@ -49,7 +50,7 @@ header{
 }
 header .nav{
     color: white !important;
-    font-size: x-large;
+    font-size: var(--nav-font-size);
     margin: auto;
     display: flex;
     align-items: center;
@@ -68,7 +69,48 @@ header .title{
 .Re{
     font-family: serif;
 }
-
+/* Navbar */
+.navbar2{
+    width: 100vw;
+}
+.NAV{
+    border: none ;
+    color: white !important;
+    background-color: var(--nav-color);
+    text-align: center;
+    font-size: var(--nav-font-size);
+}
+.NAV a{
+    color: white !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.NAV.active{
+    border: var(--nav-color) 3px solid ;
+    color: var(--nav-color) !important;
+    background-color: white;
+}
+.NAV a.active{
+    color: var(--nav-color) !important;
+}
+.screen_map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--header-color);
+    font-size: 10vw;
+    width: 100vw;
+    height: 80vh;
+}
+.screen_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw;
+    width: 100vw;
+    height: 80vh;
+}
 /* フッター */
 .copyright{
     background-color: var(--footer-color-deep);
