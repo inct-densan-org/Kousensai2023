@@ -136,7 +136,7 @@ header .title{
 }
 .footer-info ul li{
     font-size: 1em;
-    line-height: 60px;
+    line-height: 45px;
     margin-right: 20px;
     display: inline;
 }
@@ -152,6 +152,7 @@ div.address {
     margin: 20px auto 0px;
     color: white;
 }
+
 .logo-ft img{
     width: 50px;
     margin: 10px 10px 10px 0px;
@@ -164,12 +165,22 @@ div.address {
     font-size: 1.5em;
     display: inline-block;
 }
-address{
-    color: #FFF;
-    font-size: small;
-    font-style: normal;
-}
+
+
 .name-ft span {
     font-size: small;
     line-height: 14px;
 }
+@media screen and (max-width: 768px) {
+    header .title{
+        font-size: 40px ;
+    }
+    div.address {
+        width: 100% ;
+        
+    }
+    .table_element{
+        padding: 5%;
+        width: 93%;
+    }
+  }
