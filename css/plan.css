@@ -7,6 +7,10 @@
 	font-family: 'soukou';
 	src: url(../font/SoukouMincho.ttf);
 }
+@font-face {
+    font-family: "comming";
+    src: url(../font/BebasNeue-Regular.ttf);
+}
 :root{
     --box-shadow : 0 8px 20px rgba(0,0,0,0.2);
     --footer-color : #3155A6;
@@ -127,7 +131,7 @@ header .title{
     font-size: 10vw;
     width: 100vw;
     height: 80vh;
-    font-family: fantasy;
+    font-family: "Comming";
 }
 .screen_list{
     display: flex;
@@ -136,7 +140,7 @@ header .title{
     font-size: 10vw;
     width: 100vw;
     height: 80vh;
-    font-family: fantasy;
+    font-family: "Comming";
     -webkit-text-stroke: var(--header-color) 2px ;
     color: white;
 }
