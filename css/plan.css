@@ -134,10 +134,24 @@ header .title{
     color: var(--header-color);
     font-size: 10vw;
     width: 100vw;
-    height: 80vh;
-<<<<<<< Updated upstream
     font-family: fantasy;
 }
+
+.element_map{
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    transition: all 0.3s;
+    width: 80%;
+    background-color:white ;
+    color: black;
+    text-align: center;
+}
+.element_map img{
+    float:inline-end;
+}
+/* 企画一覧 */
 .screen_list{
     display: flex;
     align-items: center;
@@ -145,16 +159,8 @@ header .title{
     font-size: 10vw;
     width: 100vw;
     height: 80vh;
-    font-family: fantasy;
-    -webkit-text-stroke: var(--header-color) 2px ;
     color: white;
-=======
 }
-element_map{
-
->>>>>>> Stashed changes
-}
-/* 企画一覧 */
 /* フッター */
 .copyright{
     background-color: var(--footer-color-deep);
