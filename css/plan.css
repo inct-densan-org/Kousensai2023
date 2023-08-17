@@ -119,14 +119,23 @@ header .title{
 .NAV a.active{
     color: var(--nav-color) !important;
 }
+
+
+.screen_list{
+    font-size: 10vw;
+    width: 100vw;
+    height: 80vh;
+    font-family: "comming";
+    -webkit-text-stroke: var(--header-color) 2px ;
+    color: white;
+}
+/* 企画マップ */
 .screen_map{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--header-color);
     font-size: 10vw;
     width: 100vw;
     height: 80vh;
+<<<<<<< Updated upstream
     font-family: fantasy;
 }
 .screen_list{
@@ -139,7 +148,13 @@ header .title{
     font-family: fantasy;
     -webkit-text-stroke: var(--header-color) 2px ;
     color: white;
+=======
 }
+element_map{
+
+>>>>>>> Stashed changes
+}
+/* 企画一覧 */
 /* フッター */
 .copyright{
     background-color: var(--footer-color-deep);
