@@ -121,20 +121,10 @@ header .title{
 }
 
 
-.screen_list{
-    font-size: 10vw;
-    width: 100vw;
-    height: 80vh;
-    font-family: "comming";
-    -webkit-text-stroke: var(--header-color) 2px ;
-    color: white;
-}
+
 /* 企画マップ */
 .screen_map{
-    color: var(--header-color);
-    font-size: 10vw;
     width: 100vw;
-    font-family: fantasy;
 }
 
 .element_map{
@@ -151,15 +141,38 @@ header .title{
 .element_map img{
     float:inline-end;
 }
+.element_map:hover {
+    transform: scale(1.01, 1.01);
+    transition: all ease 0.3s;
+}
 /* 企画一覧 */
+
 .screen_list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10vw;
     width: 100vw;
-    height: 80vh;
-    color: white;
+    color: black;
+}
+.element_plan{
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    transition: all 0.3s;
+    background-color:white ;
+    color: black;
+    text-align: center;
+}
+.element_plan:hover{
+    transform: scale(1.01, 1.01);
+    transition: all ease 0.3s;
+}
+.element_plan h1{
+    font-size: large;
+    border-bottom: 3px solid black;
+    padding: 3px;
+}
+.element_plan p{
+    font-size: medium;
+    text-align: left;
 }
 /* フッター */
 .copyright{
@@ -229,10 +242,13 @@ div.address {
         width: 100% ;
         
     }
+    .element_map,
+    .element_plan,
     .table_element{
         padding: 5%;
         width: 93%;
     }
+    
     header .nav{
         font-size: xx-large;
     }
