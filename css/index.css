@@ -49,7 +49,7 @@ li {
 /* ヘッダー */
 header{
     border-bottom: 2px white solid;
-    
+    width: 100vw;
 }
 header .nav{
     color: white !important;
@@ -106,7 +106,7 @@ header .title{
   }
   .kv::after {
     content: '';
-    width: 100%;
+    width: 100vw;
     height: calc(100% + 92px);
     background-color: #10394b;
     display: block;
@@ -167,6 +167,7 @@ header .title{
 .wrapper img {
     border-radius: 20px;
     margin: 30px auto;
+    
 }
 
 .wrapper h1 {
@@ -209,6 +210,9 @@ header .title{
 .table_element h1{
     border-bottom: black 4px solid;
 }
+.table_element img{
+    max-height: 500px;
+}
 .point-p-left {
     font-size: 50px;
     font-family: soukou;
@@ -240,12 +244,13 @@ header .title{
     font-size: 10px;
     line-height: 15px;
     padding: 10px;
+
     color: white;
 }
 .footer-info{
     background-color: var(--footer-color);
     padding: 10px;
-    width: 100%;
+    width: 100vw;
     min-height: 250px;
 }
 .footer-info a{
@@ -263,7 +268,7 @@ header .title{
     display: inline;
 }
 footer{
-    width: 100%;
+    width: 100vw;
     min-height: 280px;
     z-index: 3333;
     position: relative;
