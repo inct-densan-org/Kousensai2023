@@ -13,8 +13,13 @@
     --box-shadow : 0 8px 20px rgba(0,0,0,0.2);
     --footer-color : #3155A6;
     --footer-color-deep : #000461;
-    --header-color : #0093D6;
+    
     --nav-color : rgba(0,147,214,0.6);
+    --main-color : #3DA9FC;
+    --text-color:#094067;
+    --sub-color:#90B4CE;
+    --acsent-color:#EF4565;
+    --backgroud-color:#D8EEFE;
 }
 /* ページの共通部分 */
 html {
@@ -34,8 +39,14 @@ a {
 
 p {
     font-size: 1.3rem;
+    color: var(--text-color);
 }
-
+h1{
+    color: var(--text-color);
+}
+h2{
+    color: var(--text-color);
+}
 img {
     max-width: 100%;
 }
@@ -131,7 +142,25 @@ header .title{
     font-size: 20px;
     text-align: center;
   }
-
+  .time{
+    width: 60%;
+    
+    text-align: center;
+    margin: auto;
+}
+.mini{
+    font-size: 0.5em;
+}
+  .kv h1{
+    color: white;
+    border-bottom:2px white solid ;
+    padding-bottom: 2%;
+    font-size: 2.5rem;
+  }
+  .kv h2{
+    color: white;
+    font-size: 1.8rem;
+  }
 /* video */
 .video {
     width: 100%;
@@ -187,7 +216,12 @@ header .title{
     object-fit: cover;
     object-position: 50% 10%;
   }
-.backgroud_table{
+.backgroud_table_1{
+    width: 100vw;
+    padding: 30px 0;
+    background-color: var(--backgroud-color);
+}
+.backgroud_table_2{
     width: 100vw;
     padding: 30px 0;
     background-color: white;
