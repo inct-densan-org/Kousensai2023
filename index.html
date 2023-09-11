@@ -24,36 +24,50 @@
 <body>
     <!-- header -->
     <header id="header">
-        <div class="container-fluid">
+        <div class="container-fluid" id="home">
             <div class="row">
               <div class="col-md-6 title col-7 px-lg-5">
-                <span class="Re">Re:</span>高専祭
+                <a href="./index.html"><span class="Re">Re:</span>高専祭</a>
               </div>
               <div class="col-md-6 d-none d-md-block">
                 <ul class="nav" style="margin-right: 10%;">
-                    <i class="bi bi-list position-fixed" style="z-index: 3; font-size: 48px;"></i>
+                    <i class="bi bi-list position-fixed" style="z-index: 3; font-size: 48px;" id="pc_i"></i>
                 </ul>
               </div>
               <!-- 画面サイズがmd以下になった時の表示 -->
               <div class="col-5 d-md-none d-block">
                 <ul class="nav">
-                    <i class="bi bi-list" style="z-index: 3;"></i>
+                    <i class="bi bi-list" style="z-index: 3;" id="sumaho_i"></i>
                 </ul>
               </div>
             </div>
         </div>
         <!-- バーガーメニュー -->
-    <article class="burger">
+    <article id="sumaho_burger">
         <ul>
             <li><a href="index.html">ホーム</a></li>
-                <li><a href="plan.html">企画一覧</a></li>
-                <li><a href="access.html">アクセス</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="#">instagram</a></li>
-                <li><a href="#">twitter</a></li>
+                <li><a href="plan.html">企画について</a></li>
+                <li><a href="https://www.instagram.com/nitic_gakuseikai/">instagram</a></li>
+                <li><a href="https://twitter.com/gakusei_kosen?s=20">X（旧twitter）</a></li>
         </ul>
     </article>
+    <div class="contents" id="pc_burger">
+        <div class="contents-text">
+          <img src="./img/syorui.png" alt="">
+          <h1 style="margin: 0px 10px;">目次</h1>
+        </div>
+        <ul>
+          <li><a href="#home"><p>1</p><div class="contents-box"></div><p>ホーム</p></a></li>
+          <li><a href="#about"><p>2</p><div class="contents-box"></div><p>高専祭とは</p></a></li>
+          <li><a href="#plan"><p>3</p><div class="contents-box"></div><p>企画について</p></a></li>
+          <li><a href="#hello"><p>4</p><div class="contents-box"></div><p>実行委員長の挨拶</p></a></li>
+          <li><a href="#access"><p>5</p><div class="contents-box"></div><p>アクセス</p></a></li>
+          <li><a href="#SNS"><p>6</p><div class="contents-box"></div><p>公式SNSについて</p></a></li>
+          <li><a href="#panhu"><p>7</p><div class="contents-box"></div><p>パンフレット配布</p></a></li>
+        </ul>
+    </div>
     </header>
+    <!-- 目次 -->
     
     <!-- 動画再生 -->
     <!-- 動画内テキスト -->
@@ -76,7 +90,7 @@
     <!-- とりあえずブレイクポイントをLarge（≥992px）でやってみる -->
     <!-- 開催にあたって -->
     <div class="over-y">
-        <article class="backgroud_table_2">
+        <article class="backgroud_table_2" id="about">
             <div class="table_element">
                 <h1>高専祭とは</h1>
                 <div class="container">
@@ -97,9 +111,9 @@
         </article>
     </div>
     
-    <!-- 開催時刻 -->
+    <!-- 企画 -->
     <div class="over-y">
-        <article class = "backgroud_table_1">
+        <article class = "backgroud_table_1" id="plan">
             <div class="table_element">
                 <h1>企画について</h1>
                 <div class="container my-4">
@@ -113,7 +127,7 @@
                                     <h2>企画一覧</h2>
                                 </div>
                                 <p>当日、屋台や展示といった企画がたくさん行われます！<br>ぜひ詳細を確認してください！</p>
-                                <div class="plan_button">企画一覧<i class="bi bi-chevron-right"></i></div>
+                                <a href="./plan.html" class="plan_button">企画一覧<i class="bi bi-chevron-right"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-12">
@@ -125,7 +139,7 @@
                                     <h2>企画マップ</h2>
                                 </div>
                                 <p>企画の開催場所を掲載しています！<br>ぜひ詳細を確認してください！<br></p>
-                                <div class="plan_button">企画マップ<i class="bi bi-chevron-right"></i></div>
+                                <a href="./plan.html" class="plan_button">企画マップ<i class="bi bi-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -136,7 +150,7 @@
     
     <!-- 実行委員長の挨拶 -->
     <div class="over-y">
-        <article class="backgroud_table_2">
+        <article class="backgroud_table_2" id="hello">
             <div class="table_element">
                 <h1>実行委員長の挨拶</h1>
                 <div class="container">
@@ -160,7 +174,7 @@
     
     <!-- バスの時刻表 -->
     <div class="over-y">
-        <article class="backgroud_table_1">
+        <article class="backgroud_table_1" id="access">
             <div class="table_element">
                 <h1 >スクールバス運行表</h1>
                 <div class="container">
@@ -188,7 +202,7 @@
     
     <!-- 公式SNSについて -->
     <div class="over-y">
-        <article class = "backgroud_table_1">
+        <article class = "backgroud_table_1" id="SNS">
             <div class="table_element">
                 <h1>公式SNSについて</h1>
                 <div class="container">
@@ -208,7 +222,7 @@
     
     <!-- パンフレット配布 -->
     <div class="over-y">
-        <article class = "backgroud_table_2">
+        <article class = "backgroud_table_2" id="panhu">
             <div class="table_element">
                 <h1>パンフレット配布</h1>
                 <div class="container">
@@ -232,10 +246,8 @@
             <ul>
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="plan.html">企画一覧</a></li>
-                <li><a href="access.html">アクセス</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="#">instagram</a></li>
-                <li><a href="#">twitter</a></li>
+                <li><a href="https://www.instagram.com/nitic_gakuseikai/">instagram</a></li>
+                <li><a href="https://twitter.com/gakusei_kosen?s=20">X（旧twitter）</a></li>
             </ul>
             <div class="address">
                 <div class="logo-ft" style="height: 80px;">

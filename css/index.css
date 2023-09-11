@@ -84,7 +84,7 @@ header .title{
 .Re{
     font-family: serif;
 }
-.burger{
+#sumaho_burger{
     z-index: 2;
     background-color: rgb(100, 169, 199);
     width: 100vw;
@@ -97,18 +97,89 @@ header .title{
     pointer-events: none;
     transition: all 0.35s ease;
 }
-.burger.active{
+#sumaho_burger.active{
     pointer-events: all;
     opacity: 1;
     transition: all 0.35s ease;
 }
-.burger ul{
+#sumaho_burger ul{
     margin-top:25% ;
 }
-.burger li{
+#sumaho_burger li{
     font-size: 1.7rem;
     line-height: 60px;
 }
+/* 目次 */
+.contents{
+    position: absolute;
+    right: -250px;
+    width: 250px;
+    margin-top:20px ;
+    border: var(--main-color) solid 5px;
+    position: fixed;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    transition: all ease-in-out 0.5s;
+}
+.contents.active{
+    right: 40px;
+    transition: all ease-in-out 0.5s;
+}
+.contents-text{
+    display: flex;
+    font-size: 14px;
+    padding: 5px 20px;
+    border-bottom: var(--text-color) 1px dashed;
+    align-items: center;
+}
+
+.contents ul {
+    padding: 0px;
+}
+.contents ul li{
+    list-style: none;
+}
+.contents ul li a{
+    display: flex;
+    margin: 2px 6px;
+    text-decoration: none;
+    color: black;
+     position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.contents a:after {
+    position: absolute;
+    bottom: 8px;
+    
+    width: 90%;
+    height: 3px;
+    background-color: var(--main-color);
+    transform: translate(-100%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+    content: "";
+  }
+  
+  .contents  a:hover:after {
+    transform: translate(0, 0);
+  }
+.contents p{
+    font-size: 16px;
+    font-weight: bolder;
+    
+    margin: 8px;
+}
+.contents-box{
+    background-color: var(--main-color);
+    width: 2px;
+    height: 14px;
+    margin: 14px 0;
+}
+
+.contents-text img{
+    height: 35px;
+}
+
 /* kv */
 .kv {
     height: 100vh;
@@ -310,6 +381,11 @@ header .title{
     margin: auto;
     
     }
+.plan_button:hover{
+    transition: all 0.25s ease-in-out;
+    transform: translate(5px,5px);
+    box-shadow: none;
+}
 .plan_backgroud p{
     margin: auto;
     font-size: 1.2rem;
