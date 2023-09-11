@@ -26,14 +26,12 @@
     <header id="header">
         <div class="container-fluid">
             <div class="row">
-              <div class="col-md-6 title col-7">
+              <div class="col-md-6 title col-7 px-lg-5">
                 <span class="Re">Re:</span>高専祭
               </div>
               <div class="col-md-6 d-none d-md-block">
                 <ul class="nav" style="margin-right: 10%;">
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="plan.html">企画一覧</a></li>
-                    <li><a href="access.html">アクセス</a></li>
+                    <i class="bi bi-list position-fixed" style="z-index: 3; font-size: 48px;"></i>
                 </ul>
               </div>
               <!-- 画面サイズがmd以下になった時の表示 -->
@@ -60,121 +58,174 @@
     <!-- 動画再生 -->
     <!-- 動画内テキスト -->
     <div class="kv">
+        <div class="kv-backgroud"></div>
         <div class="catch-copy">
             <div class="main-copy">Re:Kosen Sai</div>
-            <div class="time">
-                <h1><span class="mini" style="">2023</span>10/28<span class="mini">[sat]</span>~29<span class="mini">[sun]</span></h1>
-                <h2>一関工業高等専門学校　9:00~17:00</h2>
+            <div class="time ">
+                <h1 class="d-flex justify-content-center" ><div class="mini" >2023</div><div>10/28<span class="mini">[sat]</span> ~ 29<span class="mini">[sun]</span></div></h1>
+                <h2 class="">9:00~17:00</h2>
             </div>
             
         </div>
     </div>
     <!-- 動画本体 -->
     <div class="video">
-        <video src="video/seishun.mp4"  autoplay loop muted  ></video>
+        <video src="video/syukasai.mp4"  autoplay loop muted  ></video>
     </div>
     <!-- メインビジュアル -->
     <!-- とりあえずブレイクポイントをLarge（≥992px）でやってみる -->
-    <div class="wrapper">
-        <div class="container">
-            <div class="row">
-                
-            </div>
-        </div>            
-    </div>
     <!-- 開催にあたって -->
-    <article class="backgroud_table_2">
-        <div class="table_element">
-            <h1>開催にあたって</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center">
-                        <img src="image/logo.png" alt="logo" >
+    <div class="over-y">
+        <article class="backgroud_table_2">
+            <div class="table_element">
+                <h1>高専祭とは</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center">
+                            <img src="image/Re2.png" alt="高専祭のポスター" >
+                        </div>
+                        <p class="col-lg-6 col-12 fs-5">
+                            高専祭は、高等専門学校にて高専生が主催する文化祭です。部活動、クラス等の団体が展示、実演、模擬店の出店を行い、高専の魅力を発信します。地域の方、遠方からご来場の方にもご参加いただけますので、是非お越しください。<br><br>
+                            一関工業高等専門学校 <span class="acsent">第59回高専祭｢Re :｣</span>は、 2023年10月28日、29日に開催されます。公式ウェブサイトや、一関高専学生会のSNSで随時情報が更新されるので、ご確認ください。<br><br>
+                            今年のスローガンである<span class="acsent">「Re：」</span>は再び始めることを示す言葉であり、学園祭がコロナの影響で一時中断した状況から、再び学園祭を始めることを象徴しています。<br><br>
+                            高専祭は高専の学生たちが一丸となって作り上げる一大イベントです。開催者、参加者ともに、心に残る良い高専祭を目指しています。皆様のご来場心よりお待ちしております。
+                            
+                        </p>
                     </div>
-                    <p class="col-lg-6 col-12 fs-5" style="padding-top: 3%;">
-                        高専祭とは、高等専門学校の学生が主催する文化祭です。高専祭では、各学科や部活動、サークルなどが展示や実演、模擬店などを行い、高専の魅力を発信します。高専祭は一般の方もご参加いただけますので、ぜひお越しください。<br>
-                        高専祭2023は、7月11日（火）に開催されます。開催時間は午前10時から午後5時までです。専祭の公式ウェブサイトやSNSで随時更新されますので、チェックしてください。<br>
-                        高専祭2023は、高専の学生たちが一丸となって作り上げる一大イベントです。高専の学びや文化に触れることができる貴重な機会です。皆様のご来場を心よりお待ちしております。
-                    </p>
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
+    </div>
+    
     <!-- 開催時刻 -->
-    <article class = "backgroud_table_1">
-        <div class="table_element">
-            <h1>開催日・時間について</h1>
-            <div class="container">
-                <div class="row">
-                    
-                    <p class="col-12 fs-3 text-center">
-                        <span class="fs-1 " >--　日程　--</span><br>
-                １０月２８日(木)～２９日（金）  <br>
-                    両日１０時～１７時<br>
-                    <span class="fs-1 " >--　スローガン　--</span><br>
-                        Re:<br>
-                     <span class="fs-4">   「Re：」は再び始めることを示す言葉であり、学園祭がコロナの影響で一時中断した状況から、再び学園祭を始めることを象徴しています。</span>
-                    </p>
+    <div class="over-y">
+        <article class = "backgroud_table_1">
+            <div class="table_element">
+                <h1>企画について</h1>
+                <div class="container my-4">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 my-4 my-lg-0">
+                            <div class="plan_backgroud">
+                                <div class="d-flex">
+                                    <div class="enclosure">
+                                        <i class="bi bi-list-ul" style="font-size: 2.4rem;color: #094067;"></i>
+                                    </div>
+                                    <h2>企画一覧</h2>
+                                </div>
+                                <p>当日、屋台や展示といった企画がたくさん行われます！<br>ぜひ詳細を確認してください！</p>
+                                <div class="plan_button">企画一覧<i class="bi bi-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="plan_backgroud">
+                                <div class="d-flex align-content-center">
+                                    <div class="enclosure">
+                                        <i class="bi bi-map" style="font-size: 2.4rem;color: #094067;"></i>
+                                    </div>
+                                    <h2>企画マップ</h2>
+                                </div>
+                                <p>企画の開催場所を掲載しています！<br>ぜひ詳細を確認してください！<br></p>
+                                <div class="plan_button">企画マップ<i class="bi bi-chevron-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
+    </div>
+    
     <!-- 実行委員長の挨拶 -->
-    <article class="backgroud_table_2">
-        <div class="table_element">
-            <h1>実行委員長の挨拶</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-12 d-flex align-items-center justify-content-center">
-                        <img src="image/owner.jpg" alt="logo" >
-                    </div>
-                    <div class="col-lg-8 col-12 hello_text" style="padding-top: 3%;">
-                       <p class="fs-5">こんにちは、皆さん。実行委員長のBing AIと申します。今日は、３年ぶりに対面で一般の方もお招きした「高専祭」にご来場いただき、誠にありがとうございます。🙇‍♂️</p> 
-                        <p class="fs-5">高専祭とは、高等専門学校の学園祭のことで、各学科や部活動、サークルなどが様々な企画や展示を行っています。高専生の創造力や技術力を存分に発揮した作品やパフォーマンスをぜひご覧ください。</p>
-                        <p class="fs-5"> また、今年は新型コロナウイルスの感染状況により、入場制限や感染防止対策を行っております。ご協力いただけますようお願い申し上げます。😷</p>
-                        <p class="fs-5">それでは、皆さんにとって楽しく有意義な時間となりますように。高専祭をお楽しみください。🎉</p>
-                        <p style="text-align: right;" class="fs-5">一関高専高専祭実行委員会委員長<br>
-                            Bing AI</p>
-                        <p>ここは画像のサイズに文字の大きさなどをよって変える予定です</p>
-                     </div>
-                </div>
-            </div>
-        </div>
-    </article>
-    <!-- 公式SNSについて -->
-    <article class = "backgroud_table_1">
-        <div class="table_element">
-            <h1>公式SNSについて</h1>
-            <div class="container">
-                <div class="row">
-                    <p class="col-12 fs-4 text-center" style="padding-top: 5%;">
-                      これらのSNSでも情報を発信しています！
-                    </p>
-                    <div class=" col-12 d-flex align-items-center justify-content-center" style="font-size:13vmin;margin: auto;text-align: center; ">
-                        <i class="bi bi-youtube" style="color: crimson;padding: 0 5% ;"></i>
-                        <i class="bi bi-twitter" style="color:cyan;padding: 0 5%;"></i>
-                        <i class="bi bi-instagram" style="color: crimson;padding: 0 5%;"></i>
+    <div class="over-y">
+        <article class="backgroud_table_2">
+            <div class="table_element">
+                <h1>実行委員長の挨拶</h1>
+                <div class="container">
+                    <div class="row">
+                        <!-- <div class="col-lg-4 col-12 d-flex align-items-center justify-content-center"> -->
+                            <!-- <img src="image/owner.jpg" alt="logo" > -->
+                        <!-- </div> -->
+                        <div class=" hello_text" style="padding-top: 3%;">
+                           <p class="fs-5 " >今年度の高専祭実行委員長を務めます4年機械・知能系の杉浦　夢斗です．<br>
+                            この度，一大イベントである高専祭を2023年10月28日(土)，10月29日(日)に開催することとなりました．<br>
+                            感染症の影響で，開催できない年や制限をかけての開催が行われましたが，今年は制限をなくしての開催となります．<br>
+                            各系ごとの展示や学生らの趣向が詰まった企画・ステージなど学生はもちろん，来場者の皆様にも楽しんでいただけるようなイベントをご用意しております．<br>
+                            「Re：」というスローガンのもと，再始動した高専祭をぜひお楽しみください！<br>
+                            最後に，高専祭を開催するにあたり協賛していただいた企業様，協力していただいた学生，教職員の皆様に感謝を申し上げます．</p>
+                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </article>
-    <!-- パンフレット配布 -->
-    <article class = "backgroud_table_2">
-        <div class="table_element">
-            <h1>パンフレット配布</h1>
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="fs-5 " style="padding-top: 2%;">
-                        <p class="fs-5">こちらで電子版のパンフレットを配布しています！</p>
-                        <a href="download/test.pdf" download style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">test.pdfをダウンロードする</a>
+        </article>
+    </div>
+    
+    <!-- バスの時刻表 -->
+    <div class="over-y">
+        <article class="backgroud_table_1">
+            <div class="table_element">
+                <h1 >スクールバス運行表</h1>
+                <div class="container">
+                    <div class="row">
+                        <p style="text-align: center; margin-top: 3%;">当日、一関駅から一関高専までのシャトルバスを運行します！<br>運行表は後ほど公開します！</p>
                         
                     </div>
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
+    </div>
+    
+    <!-- GOOGLEMAP -->
+    <div class="over-y">
+        <article class="backgroud_table_2">
+            <div class="table_element">
+                <h1 >GoogleMap</h1>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.9921356145924!2d141.10493577638468!3d38.92415724512407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f88d09d6f0b0357%3A0x7ecc4e362c08f769!2z5LiA6Zai5bel5qWt6auY562J5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1691753501795!5m2!1sja!2sjp"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+            </div>
+        </article>
+    </div>
+    
+    <!-- 公式SNSについて -->
+    <div class="over-y">
+        <article class = "backgroud_table_1">
+            <div class="table_element">
+                <h1>公式SNSについて</h1>
+                <div class="container">
+                    <div class="row">
+                        <p class="col-12 fs-4 text-center" style="padding-top: 5%;">
+                          これらのSNSでも情報を発信しています！
+                        </p>
+                        <div class=" col-12 d-flex align-items-center justify-content-center" style="font-size:13vmin;margin: auto;text-align: center; ">
+                            <i class="bi bi-twitter" style="color:cyan;padding: 0 5%;"></i>
+                            <i class="bi bi-instagram" style="color: crimson;padding: 0 5%;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    
+    <!-- パンフレット配布 -->
+    <div class="over-y">
+        <article class = "backgroud_table_2">
+            <div class="table_element">
+                <h1>パンフレット配布</h1>
+                <div class="container">
+                    <div class="row">
+                        <img src="./image/Re2.png" alt="" class="col-lg-5">
+                        <div class="fs-5 col-lg-7" style="padding-top: 2%;">
+                            <p >こちらで電子版のパンフレットを配布しています！</p>
+                            <p>パンフレットでは、企画の詳細や企画マップ、体育館のタイムスケジュールなど様々な情報が入っています！</p>
+                            <a href="download/test.pdf" download style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">test.pdfをダウンロードする</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    
     <!-- フッター -->
     <footer>
         <div class="footer-info">
