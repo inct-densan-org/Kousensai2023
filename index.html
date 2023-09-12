@@ -19,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-    <script src="js/index.js"> </script>
+    
 </head>
 <body>
     <!-- header -->
@@ -95,10 +95,10 @@
                 <h1>高専祭とは</h1>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center">
-                            <img src="image/Re2.png" alt="高専祭のポスター" >
+                        <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center" style="position: relative;" id="re2-img">
+                            <img src="image/Re2.png" alt="高専祭のポスター" id="re2">
                         </div>
-                        <p class="col-lg-6 col-12 fs-5">
+                        <p class="col-lg-6 col-12 ">
                             高専祭は、高等専門学校にて高専生が主催する文化祭です。部活動、クラス等の団体が展示、実演、模擬店の出店を行い、高専の魅力を発信します。地域の方、遠方からご来場の方にもご参加いただけますので、是非お越しください。<br><br>
                             一関工業高等専門学校 <span class="acsent">第59回高専祭｢Re :｣</span>は、 2023年10月28日、29日に開催されます。公式ウェブサイトや、一関高専学生会のSNSで随時情報が更新されるので、ご確認ください。<br><br>
                             今年のスローガンである<span class="acsent">「Re：」</span>は再び始めることを示す言葉であり、学園祭がコロナの影響で一時中断した状況から、再び学園祭を始めることを象徴しています。<br><br>
@@ -126,8 +126,8 @@
                                     </div>
                                     <h2>企画一覧</h2>
                                 </div>
-                                <p>当日、屋台や展示といった企画がたくさん行われます！<br>ぜひ詳細を確認してください！</p>
-                                <a href="./plan.html" class="plan_button">企画一覧<i class="bi bi-chevron-right"></i></a>
+                                <p>当日、屋台や展示といった企画がたくさん行われます！</p>
+                                <a  class="plan_button" id="nextPageButton">企画一覧<i class="bi bi-chevron-right"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-12">
@@ -138,7 +138,7 @@
                                     </div>
                                     <h2>企画マップ</h2>
                                 </div>
-                                <p>企画の開催場所を掲載しています！<br>ぜひ詳細を確認してください！<br></p>
+                                <p>企画の開催場所を掲載しています！</p>
                                 <a href="./plan.html" class="plan_button">企画マップ<i class="bi bi-chevron-right"></i></a>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                             <!-- <img src="image/owner.jpg" alt="logo" > -->
                         <!-- </div> -->
                         <div class=" hello_text" style="padding-top: 3%;">
-                           <p class="fs-5 " >今年度の高専祭実行委員長を務めます4年機械・知能系の杉浦　夢斗です．<br>
+                           <p class=" " >今年度の高専祭実行委員長を務めます4年機械・知能系の杉浦　夢斗です．<br>
                             この度，一大イベントである高専祭を2023年10月28日(土)，10月29日(日)に開催することとなりました．<br>
                             感染症の影響で，開催できない年や制限をかけての開催が行われましたが，今年は制限をなくしての開催となります．<br>
                             各系ごとの展示や学生らの趣向が詰まった企画・ステージなど学生はもちろん，来場者の皆様にも楽しんでいただけるようなイベントをご用意しております．<br>
@@ -207,7 +207,7 @@
                 <h1>公式SNSについて</h1>
                 <div class="container">
                     <div class="row">
-                        <p class="col-12 fs-4 text-center" style="padding-top: 5%;">
+                        <p class="col-12  text-center" style="padding-top: 5%;">
                           これらのSNSでも情報を発信しています！
                         </p>
                         <div class=" col-12 d-flex align-items-center justify-content-center" style="font-size:13vmin;margin: auto;text-align: center; ">
@@ -228,7 +228,8 @@
                 <div class="container">
                     <div class="row">
                         <img src="./image/Re2.png" alt="" class="col-lg-5">
-                        <div class="fs-5 col-lg-7" style="padding-top: 2%;">
+                        <div class=" col-lg-7" style="padding-top: 2%;">
+                            <p>左の画像はパンフレットが完成したらそれの表紙にしたいです</p>
                             <p >こちらで電子版のパンフレットを配布しています！</p>
                             <p>パンフレットでは、企画の詳細や企画マップ、体育館のタイムスケジュールなど様々な情報が入っています！</p>
                             <a href="download/test.pdf" download style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">test.pdfをダウンロードする</a>
@@ -271,5 +272,6 @@
             Copyright © 2023 NIT,Ichinoseki College Festival Executive CommitteeAll rights reserved.
         </div>
     </footer>
+    <script src="js/index.js"> </script>
 </body>
 </html>

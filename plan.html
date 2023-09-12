@@ -19,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-    <script src="js/plan.js"> </script>
+    
 </head>
 <body>
     <!-- header -->
@@ -53,26 +53,29 @@
         </article>
     </header>
     <!-- NavBar -->
-    <article id="change_screen">
+    <article id="change_screen" style="position: relative;">
         <div class="container-fluid" >
             <div class="row tabs-nav">
               <div class="col-6 NAV py-2">
-                <a href="#map">企画マップ</a>
+                <a href="#map" id="map-button">企画マップ</a>
               </div>
               <div class="col-6 NAV py-2">
-                <a href="#list">企画一覧</a>
+                <a href="#list" id="list-button">企画一覧</a>
               </div>
             </div>
+            
         </div>
                 <!-- mapのとき-->
                 <div class="screen_map pannel" id="map">
-                    Comming　Soon
+                    Comming　Soon…
+                    <a href="./index.html" class="back">ホームに戻る</a>
                 </div>
                 <!-- 企画一覧のとき-->
                 <div class="screen_list pannel" id="list">
-                    Comming　Soon
+                    Comming　Soon…
+                    <a href="./index.html" class="back_2">ホームに戻る</a>
                 </div>
-            
+                
     </article>
         
     
@@ -109,6 +112,7 @@
             Copyright © 2023 NIT,Ichinoseki College Festival Executive CommitteeAll rights reserved.
         </div>
     </footer>
+    <script src="js/plan.js"> </script>
 </body>
 </html>
 

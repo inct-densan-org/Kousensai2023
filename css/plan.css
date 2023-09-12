@@ -18,6 +18,12 @@
     --header-color : #0093D6;
     --nav-color : rgba(0,147,214,0.6);
     --nav-font-size:x-large;
+    --main-color : #3DA9FC;
+    --text-color:#094067;
+    --sub-color:#90B4CE;
+    --acsent-color:#EF4565;
+    --backgroud-color:#D8EEFE;
+    --para-color:#5f6c7b;
 }
 /* ページの共通部分 */
 html {
@@ -143,6 +149,7 @@ header .title{
     width: 100vw;
     height: 80vh;
     font-family: "Comming";
+    position: relative;
 }
 .screen_list{
     display: flex;
@@ -154,6 +161,36 @@ header .title{
     font-family: "Comming";
     -webkit-text-stroke: var(--header-color) 2px ;
     color: white;
+    position: relative;
+}
+.back{
+    position: absolute;
+    top: 69%;
+    margin: auto;
+    display: inline-block;
+    color: white;
+    background-color: var(--main-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 1% 10%;
+    font-size: 1.4rem;
+    -webkit-text-stroke:0px ;
+    font-weight: 700;
+}
+.back_2{
+    position: absolute;
+    top: 69%;
+    margin: auto;
+    display: inline-block;
+    color: var(--main-color);
+    background-color: white;
+    border: 3px var(--main-color) solid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 1% 10%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    -webkit-text-stroke:0px ;
 }
 /* フッター */
 .copyright{
@@ -232,5 +269,11 @@ div.address {
     
     header .nav{
         font-size: xx-large;
+    }
+    .back{
+        font-size: 1rem;
+    }
+    .back_2{
+        font-size: 1rem;
     }
   }

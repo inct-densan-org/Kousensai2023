@@ -302,7 +302,15 @@ header .title{
 .acsent{
     color: var(--acsent-color);
 }
-
+#re2{
+    /* position: absolute;
+    opacity: 0;
+    top: -200px; */
+}
+#planmap,
+#planlist{
+    opacity: 0;
+}
 .backgroud_table_2 h1{
     text-align: center;
     color: var(--text-color);
@@ -503,11 +511,11 @@ div.address {
     }
     .backgroud_table_2 p{
         padding-top: 3%;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     .backgroud_table_1 p{
         padding-top: 3%;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     .backgroud_table_1 h1{
         font-size: 2rem;
@@ -517,5 +525,9 @@ div.address {
     }
     .plan_button {
         font-size: 1.3rem;
+    }
+    .table_element{
+        padding: 2%;
+        width: 100%;
     }
   }

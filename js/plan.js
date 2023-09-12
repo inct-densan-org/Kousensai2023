@@ -33,3 +33,25 @@ $(function(){
             }
         })
 })
+
+window.addEventListener("load", () => {
+    // 現在のURLからクエリパラメータを取得
+    const queryParams = new URLSearchParams(window.location.search);
+    
+    // "source"パラメータの値を取得
+    const source = queryParams.get("source");
+    
+    // "source"パラメータが "button" の場合、ボタンからアクセスされたことを示す処理を追加
+    if (source === "button") {
+        $("#list-button").addClass("active");
+        $("#list-button").closest(".NAV").addClass("active");
+        $("#map-button").removeClass("active");
+        $("#map-button").closest(".NAV").removeClass("active");
+        $("#map").hide();
+        $("#list").show();
+      // ここにボタンからアクセスされた場合の特別な処理を追加
+    } else {
+      console.log("通常のリンクからアクセスされました。");
+      // 通常のリンクからアクセスされた場合の処理を追加
+    }
+  });
