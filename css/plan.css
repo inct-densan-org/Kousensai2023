@@ -7,6 +7,10 @@
 	font-family: 'soukou';
 	src: url(../font/SoukouMincho.ttf);
 }
+@font-face {
+    font-family: "comming";
+    src: url(../font/BebasNeue-Regular.ttf);
+}
 :root{
     --box-shadow : 0 8px 20px rgba(0,0,0,0.2);
     --footer-color : #3155A6;
@@ -69,7 +73,7 @@ header .title{
 .Re{
     font-family: serif;
 }
-.burger{
+#sumaho_burger{
     z-index: 2;
     background-color: rgb(100, 169, 199);
     width: 100vw;
@@ -82,15 +86,15 @@ header .title{
     pointer-events: none;
     transition: all 0.35s ease;
 }
-.burger.active{
+#sumaho_burger.active{
     pointer-events: all;
     opacity: 1;
     transition: all 0.35s ease;
 }
-.burger ul{
+#sumaho_burger ul{
     margin-top:25% ;
 }
-.burger li{
+#sumaho_burger li{
     font-size: 1.7rem;
     line-height: 60px;
 }
@@ -130,57 +134,26 @@ header .title{
 
 
 
-/* 企画マップ */
 .screen_map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--header-color);
+    font-size: 10vw;
     width: 100vw;
+    height: 80vh;
+    font-family: "Comming";
 }
-
-.element_map{
-    padding: 20px;
-    margin: 10px auto;
-    box-shadow: var(--box-shadow);
-    border-radius: 20px;
-    transition: all 0.3s;
-    width: 80%;
-    background-color:white ;
-    color: black;
-    text-align: center;
-}
-.element_map img{
-    float:inline-end;
-}
-.element_map:hover {
-    transform: scale(1.01, 1.01);
-    transition: all ease 0.3s;
-}
-/* 企画一覧 */
-
 .screen_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vw;
     width: 100vw;
-    color: black;
-}
-.element_plan{
-    padding: 20px;
-    margin: 10px auto;
-    box-shadow: var(--box-shadow);
-    border-radius: 20px;
-    transition: all 0.3s;
-    background-color:white ;
-    color: black;
-    text-align: center;
-}
-.element_plan:hover{
-    transform: scale(1.01, 1.01);
-    transition: all ease 0.3s;
-}
-.element_plan h1{
-    font-size: large;
-    border-bottom: 3px solid black;
-    padding: 3px;
-}
-.element_plan p{
-    font-size: medium;
-    text-align: left;
+    height: 80vh;
+    font-family: "Comming";
+    -webkit-text-stroke: var(--header-color) 2px ;
+    color: white;
 }
 /* フッター */
 .copyright{
