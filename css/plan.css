@@ -94,6 +94,14 @@ header .title{
     font-size: 1.7rem;
     line-height: 60px;
 }
+.screen_list{
+    font-size: 10vw;
+    width: 100vw;
+    height: 80vh;
+    font-family: "comming";
+    -webkit-text-stroke: var(--header-color) 2px ;
+    color: white;
+}
 /* Navbar */
 .navbar2{
     width: 100vw;
