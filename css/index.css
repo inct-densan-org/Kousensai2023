@@ -9,6 +9,8 @@
 }
 
 
+
+
 :root{
     --box-shadow : 10px 0px  10px rgba(0, 0, 0, 0.412);
     --footer-color : #3155A6;
@@ -201,12 +203,13 @@ header .title{
   }
   .kv .main-copy {
     color: #fff;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: bold;
     text-align: center;
     line-height: 1;
     letter-spacing: .2em;
-    margin: 30px
+    margin: 30px;
+    
   }
   
   .kv .sub-copy {
@@ -227,7 +230,7 @@ header .title{
     color: white;
     border-bottom:2px white solid ;
     padding-bottom: 2%;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: auto;
     width: 90%;
   }
@@ -286,6 +289,7 @@ header .title{
     background-color: white;
     margin: auto;
     box-shadow: var(--box-shadow),-10px 0px  10px rgba(0, 0, 0, 0.412);
+    z-index: 1;
 }
 .table_element {
     
@@ -302,11 +306,9 @@ header .title{
 .acsent{
     color: var(--acsent-color);
 }
-#re2{
-    /* position: absolute;
-    opacity: 0;
-    top: -200px; */
-}
+#re2,
+#kv,
+#panhuimg,
 #planmap,
 #planlist{
     opacity: 0;
@@ -317,9 +319,11 @@ header .title{
     font-size: 3rem;
     font-weight: bolder;
     padding: 2%;
+    
 }
 .backgroud_table_1 h1{
     text-align: center;
+    
     color: var(--text-color);
     font-size: 3rem;
 }
@@ -500,7 +504,7 @@ div.address {
         font-size: xx-large;
     }
     .time{
-        width: 70%;
+        width: 80%;
     }
     .kv h1{
         width: 100%;
@@ -518,10 +522,10 @@ div.address {
         font-size: 1.1rem;
     }
     .backgroud_table_1 h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .backgroud_table_2 h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .plan_button {
         font-size: 1.3rem;

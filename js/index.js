@@ -1,8 +1,4 @@
 $(function(){
-    // let elem = document.getElementById("re2");
-    // let rect = elem.getBoundingClientRect();
-    // let rectheight=Math.round(rect.height);
-    // $("#re2-img").css({"height":rectheight})
     $("#header").each(function(){
         var $BurgerIcon=$(this).find("#sumaho_i");
         var $BurgerMenu=$(this).find("#sumaho_burger");
@@ -33,8 +29,8 @@ $(function(){
         })
     })
 })
-let ticking =true;
-function fadein(target){
+
+function fadein(target,ticking){
     let elem = document.getElementById(target);
     let targetid="#"+target;
     let rect = elem.getBoundingClientRect();
@@ -42,16 +38,21 @@ function fadein(target){
     let rectheight=Math.round(rect.height)/2;
     let rectbottom=Math.round(rect.bottom)-rectheight;
     if (0 < rectbottom&& rectbottom<= windowhight && ticking) {
-        ticking = false;
-        $(targetid).animate({opacity:1,top:0},1000,'swing');
+        
+        $(targetid).animate({opacity:1},1000,'swing');
+        return true;
     }
-    if(rectbottom+rectheight<0||rectbottom-rectheight >= windowhight){
-        ticking=true
-        $(targetid).css({'opacity':'0',"top":"-200px"});
-    }
+
 }
+let Isre2=false,Iskv=false,Islist=false,Ismap=false,Ispanhu=false;
+Iskv= fadein("kv",!Iskv);
 document.addEventListener("scroll", (event) => {
-//   fadein("re2");
+  Isre2= fadein("re2",!Isre2);
+  Iskv= fadein("kv",!Iskv);
+  Islist= fadein("planlist",!Islist);
+  Ismap= fadein("planmap",!Ismap);
+  Ispanhu= fadein("panhuimg",!Ispanhu);
+
 });
 // ボタン要素を取得
 let nextPageButton = document.getElementById("nextPageButton");
