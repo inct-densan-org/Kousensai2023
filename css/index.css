@@ -489,7 +489,7 @@ div.address {
 @media screen and (max-width: 1124px) {
 
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     header .title{
         font-size: 40px ;
     }
