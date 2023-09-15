@@ -122,6 +122,7 @@ header .title{
     background-color: white;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
     transition: all ease-in-out 0.5s;
+    z-index: 9999;
 }
 .contents.active{
     right: 40px;
