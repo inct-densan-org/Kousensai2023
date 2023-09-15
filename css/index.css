@@ -63,7 +63,7 @@ li {
 /* ヘッダー */
 header{
     border-bottom: 2px white solid;
-    
+    width: 100vw;
 }
 header .nav{
     color: white !important;
@@ -189,7 +189,8 @@ header .title{
     justify-content: center;
     align-items: center;
   }
-  .kv-backgroud{
+
+.kv-backgroud{
     width: 100%;
     height: calc(100% + 92px);
     background-color: #10394b;
@@ -263,6 +264,7 @@ header .title{
     z-index: -1;
   }
 /* メインビジュアル */
+
 .full-image {
     width: 100%;
     max-width: 1920px;
@@ -334,6 +336,9 @@ header .title{
 .backgroud_table_1 p{
     color: var(--para-color);
     font-size: 1.5rem;
+}
+.table_element img{
+    max-height: 500px;
 }
 .point-p-left {
     font-size: 50px;
@@ -426,12 +431,13 @@ header .title{
     font-size: 10px;
     line-height: 15px;
     padding: 10px;
+
     color: white;
 }
 .footer-info{
     background-color: var(--footer-color);
     padding: 10px;
-    width: 100%;
+    width: 100vw;
     min-height: 250px;
 }
 .footer-info a{
@@ -449,7 +455,7 @@ header .title{
     display: inline;
 }
 footer{
-    width: 100%;
+    width: 100vw;
     min-height: 280px;
     z-index: 3333;
     position: relative;

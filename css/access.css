@@ -151,9 +151,10 @@ header .title{
 /* Google Mapを囲う要素 */
 .map {
     position: relative;
-    width: 100%;
+    width: 70%;
     height: 0;
-    padding-top: 66.6%; /* 比率を3:2に固定 */
+    padding-top: 45%;
+    margin: auto; 
   }
   
   /* Google Mapのiframe */
@@ -224,6 +225,12 @@ div.address {
     font-size: small;
     line-height: 14px;
 }
+@media screen and (max-width: 1124px) {
+    .map {
+        width: 90%;
+        padding-top: 60.6%; /* 比率を3:2に固定 */
+      }
+}
 @media screen and (max-width: 768px) {
     header .title{
         font-size: 40px ;
@@ -245,4 +252,8 @@ div.address {
     header .nav{
         font-size: xx-large;
     }
+    .map {
+        width: 100%;
+        padding-top: 66.6%; /* 比率を3:2に固定 */
+      }
   }
