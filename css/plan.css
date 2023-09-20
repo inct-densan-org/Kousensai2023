@@ -133,18 +133,7 @@ header .title{
 
 
 
-.screen_map{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--header-color);
-    font-size: 10vw;
-    width: 100vw;
-    height: 80vh;
-    font-family: "Comming";
-    position: relative;
 
-}
 
 .back{
     position: absolute;
@@ -185,6 +174,8 @@ header .title{
     background-color: white;
     padding: 4%;
     height: 290px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 .list_content h1{
     color: var(--text-color);
@@ -214,6 +205,11 @@ header .title{
     text-align: center;
     border-radius: 20px;
     margin: auto;
+}
+/* map */
+.screen_map{
+    color: var(--header-color);
+    width: 100vw;
 }
 /* フッター */
 .copyright{

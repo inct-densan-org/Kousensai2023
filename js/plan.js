@@ -1,24 +1,27 @@
+function showlist(){
+    $("#list-button").addClass("active");
+    $("#list-button").closest(".NAV").addClass("active");
+    $("#map-button").removeClass("active");
+    $("#map-button").closest(".NAV").removeClass("active");
+    $("#map").hide();
+    $("#list").show();
+}
+function showmap(){
+    $("#map-button").addClass("active");
+    $("#map-button").closest(".NAV").addClass("active");
+    $("#list-button").removeClass("active");
+    $("#list-button").closest(".NAV").removeClass("active");
+    $("#list").hide();
+    $("#map").show();
+}
 $(function(){
-    $("#change_screen").each(function(){
-        var $tabList =$(this).find(".tabs-nav"),
-            $tavAnchors=$tabList.find("a"),
-            $tabpannel=$(this).find(".pannel");
-        $tabList.on("click","a",function(event){
-            event.preventDefault();
-            var $this=$(this);
-            if($this.hasClass("active")){
-                return;
-            }
-            $tavAnchors.removeClass("active");
-            $tavAnchors.closest(".NAV").removeClass("active");
-            $this.addClass("active");
-            $this.closest(".NAV").addClass("active");
-            $tabpannel.hide();
-            $($this.attr("href")).show();
-        })
-        $tavAnchors.eq(0).trigger("click");
-        
+    $("#map-button").on("click",function(){
+        showmap()
     })
+    $("#list-button").on("click",function(){
+        showlist()
+    })
+        
     var $BurgerIcon=$(this).find("#sumaho_i");
         var $BurgerMenu=$(this).find("#sumaho_burger");
         $BurgerIcon.on("click",function(){
@@ -43,14 +46,10 @@ window.addEventListener("load", () => {
     
     // "source"パラメータが "button" の場合、ボタンからアクセスされたことを示す処理を追加
     if (source === "button") {
-        $("#list-button").addClass("active");
-        $("#list-button").closest(".NAV").addClass("active");
-        $("#map-button").removeClass("active");
-        $("#map-button").closest(".NAV").removeClass("active");
-        $("#map").hide();
-        $("#list").show();
+        showlist()
       // ここにボタンからアクセスされた場合の特別な処理を追加
     } else {
+        showmap()
       console.log("通常のリンクからアクセスされました。");
       // 通常のリンクからアクセスされた場合の処理を追加
     }
