@@ -210,6 +210,15 @@ header .title{
 .screen_map{
     color: var(--header-color);
     width: 100vw;
+    text-align: center;
+}
+.maptemp{
+    width: 100%;
+    text-align: center;
+}
+.maptemp img{
+    max-width: 800px;
+    margin: auto;
 }
 /* フッター */
 .copyright{

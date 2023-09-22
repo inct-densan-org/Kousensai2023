@@ -60,9 +60,28 @@ console.log(nextPageButton);
 // ボタンがクリックされたときの処理を定義
 nextPageButton.addEventListener("click", () => {
   // クエリパラメータを含むURLを生成
-  const nextPageURL = "../plan.html?source=button";
+  const nextPageURL = "../plan.html?source=button"
   
   // 生成したURLに移動
   window.location.href = nextPageURL;
 });
+ // スムーズスクロールの関数を定義
+function smoothScroll(targetId) {
+    const targetElement = document.getElementById(targetId);
 
+    if (targetElement) {
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// ページ内リンクがクリックされたときにスムーズスクロールを実行
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        smoothScroll(targetId);
+    });
+});

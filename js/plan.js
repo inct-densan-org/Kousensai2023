@@ -1,3 +1,37 @@
+   // スムーズスクロールの関数を定義
+function smoothScroll(targetId) {
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// ページ内リンクがクリックされたときにスムーズスクロールを実行
+document.querySelectorAll('area[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        smoothScroll(targetId);
+    });
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        console.log(targetId);
+        if(targetId=="gd"){
+            showmap();
+            smoothScroll("media");
+        }else{
+            smoothScroll(targetId);
+        }
+        
+    });
+});
 function showlist(){
     $("#list-button").addClass("active");
     $("#list-button").closest(".NAV").addClass("active");
