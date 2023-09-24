@@ -231,7 +231,7 @@ header .title{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 370px;
+    align-items: center;
   }
   .maptemp ol li{
     width: 50%;
@@ -239,7 +239,7 @@ header .title{
     margin: 7px 10px 7px 0px;
     padding-left:40px;
     font-weight: bold;
-    font-size:14px;
+    font-size:18px;
     line-height: 30px;
     border: solid 1px var(--main-color);
     border-radius:20px;
@@ -269,6 +269,23 @@ header .title{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+  #outside{
+    height: 370px;
+  }
+  #n20::before{counter-increment: list 20; content: counter(list);}
+  #n25::before{counter-increment: list 25; content: counter(list);}
+  #n29::before{counter-reset: list 0; counter-increment: list 29; content: counter(list);}
+  #n292::before{counter-reset: list 0; counter-increment: list 29; content: counter(list);}
+  #n32::before{counter-reset: list 0; counter-increment: list 32; content: counter(list);}
+  #n17::before{ counter-increment: list 17; content: counter(list);}
+  #n28::before{counter-reset: list 0; counter-increment: list 28; content: counter(list);}
+  #n27::before{counter-reset: list 0; counter-increment: list 27; content: counter(list);}
+  #n31::before{counter-reset: list 0; counter-increment: list 31; content: counter(list);}
+  #n19::before{counter-reset: list 0; counter-increment: list 19; content: counter(list);}
+  #n16::before{counter-reset: list 0; counter-increment: list 16; content: counter(list);}
+  #n30::before{counter-reset: list 0; counter-increment: list 30; content: counter(list);}
+  #n26::before{counter-reset: list 0; counter-increment: list 26; content: counter(list);}
+  #n23::before{ counter-increment: list 23; content: counter(list);}
   .maptemp ol li:hover{
     background: var(--main-color);
     color: #fff;
@@ -281,11 +298,11 @@ header .title{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin: 30px 0 10px;
 }
 .map_headline h1{
     margin: 0;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 /* 数字 */
 .number{
@@ -307,12 +324,9 @@ header .title{
 .Dnumber{
     background-color: #FF3366;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     height: 60px;
     width: 60px;
-    font-size: 3rem;
 }
 #n1{top: 74%; left: 34%;}#n2{top: 78%; left: 56%;}#n3{top: 59%; left: 44%;}
 #n4{top: 4%; left: 23%;}#n5{top: 13%; left: 2%;}
@@ -435,20 +449,23 @@ div.address {
         font-size: 2rem;
     }
     .Dnumber{
-        height: 30px;
-        width: 30px;
+        height: 38px;
+        width: 38px;
         font-size: 2rem;
     }
     .maptemp ol{
         height: auto;
     }
     .maptemp ol li{
-        width: auto;
+        width: 100%;
         margin: 3px 0px 3px 0px;
         font-size: 13px;
     }
     .screen_map{
         padding: 0 5%;
     }
+    #outside{
+        height: auto;
+      }
   }
 
