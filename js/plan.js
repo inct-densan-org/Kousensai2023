@@ -109,14 +109,14 @@ window.addEventListener("load", () => {
       this.shadowRoot.innerHTML = `
       <style>
       .list_content{
-        width: 380px;
+        width: 350px;
         margin: 60px 15px 0;
         height: 560px;
         position: relative;
     }
     .list_content h1{
         color: var(--footer-color-deep);
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin: 0;
         font-weight: bold;
     }
@@ -169,6 +169,12 @@ window.addEventListener("load", () => {
     }
     a{
         text-decoration: none;
+    }
+    @media screen and (max-width: 768px){
+        .list_content{
+                width: 350px;
+            }
+        }
     }
       </style>
       <div class="list_content" >

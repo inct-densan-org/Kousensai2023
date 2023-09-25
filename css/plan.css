@@ -165,9 +165,16 @@ header .title{
     -webkit-text-stroke:0px ;
 }
 /* list */
+.screen_list{
+    padding: 2% 0;
+}
 .list_backgroud{
-    width: 100%;
-    padding: 1% 4%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1300px;
+    margin: auto;
 }
 .list_content{
     width: 380px;
@@ -389,7 +396,11 @@ div.address {
     margin: 20px auto 0px;
     color: white;
 }
-
+.footer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
 .logo-ft img{
     width: 50px;
     margin: 10px 10px 10px 0px;
@@ -452,6 +463,11 @@ div.address {
     .maptemp img{
         margin: auto;
         
+    }
+    .footer-info img {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
     }
   }
   @media screen and (max-width: 900px) {
