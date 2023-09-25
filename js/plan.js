@@ -88,3 +88,103 @@ window.addEventListener("load", () => {
       // 通常のリンクからアクセスされた場合の処理を追加
     }
   });
+
+
+// 企画リストのコンポーネント化
+  class plan_list extends HTMLElement { 
+    constructor() {
+      super();
+      // カスタム要素の中にシャドウDOMを接続する
+      this.attachShadow({ mode: "open" });
+    
+      // HTMLファイルで指定された属性を取り出し、初期表示に使用する
+      const imgurl = this.getAttribute('imgurl') || 'unknown';
+      const genre = this.getAttribute('genre') || 'unknown';
+      const headline = this.getAttribute('headline') || 'unknown';
+      const text = this.getAttribute('text') || 'unknown';
+      const place = this.getAttribute('place') || 'unknown';
+      const href = this.getAttribute('href') || 'unknown';
+  
+      // (1) このカスタム要素の文書構造を定義する
+      this.shadowRoot.innerHTML = `
+      <style>
+      .list_content{
+        width: 380px;
+        margin: 60px 15px 0;
+        height: 560px;
+        position: relative;
+    }
+    .list_content h1{
+        color: var(--footer-color-deep);
+        font-size: 1.8rem;
+        margin: 0;
+        font-weight: bold;
+    }
+    .list_img{
+        border-radius: 10px;
+        width: 100%;
+        height: 0;
+        padding: 62.69% 0 0;
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 20px;
+        max-height: 280px;
+    }
+    .list_genre{
+        background-color: var(--footer-color-deep);
+        color: white;
+        text-align: center;
+        padding: 1% 3%;
+        font-size: large;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    .list_content h3{
+        margin-top: 2%;
+        font-size: large;
+        font-weight: normal;
+        line-height: 1.2;
+        color: var(--para-color);
+    }
+    .list_content p{
+        color: var(--acsent-color);
+        font-size: 1.1rem;
+    }
+    .list_button{
+        position: absolute;
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: white;
+        border: var(--footer-color-deep) 2px solid;
+        color: var(--footer-color-deep);
+        text-align: center;
+        border-radius: 60px;
+        margin: auto;
+        margin-top: auto;
+        max-width: 340px;
+        font-weight: 700;
+        bottom: 0;
+        left: 70px;
+    }
+    a{
+        text-decoration: none;
+    }
+      </style>
+      <div class="list_content" >
+        <div  style="background-image: url(${imgurl});" class="list_img"></div>
+            <div class="d-flex">
+                <div class="list_genre">${genre}</div>
+            </div>
+            <h1>${headline}</h1>
+            
+            <h3>${text}</h3>
+            <p>${place}</p>
+            <div style="width: 100%; text-align: center;"><a href="${href}" class="list_button">マップで確認　→</a></div>
+        </div>
+     </div>
+      `;
+    }
+  }
+  
+  customElements.define("plan-list", plan_list); 

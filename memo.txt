@@ -25,3 +25,8 @@ pdfをスマホで見やすいように 解決
 体育館のスケジュールをかけるところ
 目次のところの統一 or　デザインをかえてみる
 目次のアニメーション
+
+コンポーネント化
+https://codezine.jp/article/detail/16337
+参考サイト
+https://www.palsystem-kanagawa.coop/syouhin/zukan/
