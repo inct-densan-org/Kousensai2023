@@ -1,7 +1,7 @@
    // スムーズスクロールの関数を定義
 function smoothScroll(targetId) {
     const targetElement = document.getElementById(targetId);
-
+    console.log(targetElement)
     if (targetElement) {
         window.scrollTo({
             top: targetElement.offsetTop,
@@ -13,20 +13,25 @@ function smoothScroll(targetId) {
 // ページ内リンクがクリックされたときにスムーズスクロールを実行
 document.querySelectorAll('area[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+        
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
+        console.log(targetId);
         smoothScroll(targetId);
     });
 });
+$('img[usemap]').rwdImageMaps();
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         console.log(targetId);
-        if(targetId=="gd"){
+        var firstChar = targetId.charAt(0); // 最初の文字を取得
+        if(firstChar=="n"){
             showmap();
-            smoothScroll("media");
-        }else{
+            smoothScroll(targetId);
+        }else if(firstChar=="m"){
+            showlist();
             smoothScroll(targetId);
         }
         
@@ -94,9 +99,11 @@ window.addEventListener("load", () => {
   class plan_list extends HTMLElement { 
     constructor() {
       super();
-      // カスタム要素の中にシャドウDOMを接続する
-      this.attachShadow({ mode: "open" });
-    
+    }
+    connectedCallback(){
+        // カスタム要素の中にシャドウDOMを接続する
+      const shadow = this.attachShadow({ mode: 'open' });
+      
       // HTMLファイルで指定された属性を取り出し、初期表示に使用する
       const imgurl = this.getAttribute('imgurl') || 'unknown';
       const genre = this.getAttribute('genre') || 'unknown';
@@ -106,7 +113,7 @@ window.addEventListener("load", () => {
       const href = this.getAttribute('href') || 'unknown';
   
       // (1) このカスタム要素の文書構造を定義する
-      this.shadowRoot.innerHTML = `
+      shadow.innerHTML = `
       <style>
       .list_content{
         width: 350px;
@@ -186,11 +193,52 @@ window.addEventListener("load", () => {
             
             <h3>${text}</h3>
             <p>${place}</p>
-            <div style="width: 100%; text-align: center;"><a href="${href}" class="list_button">マップで確認　→</a></div>
+            <div style="width: 100%; text-align: center;"><a href="${href}" class="list_button" id="button">マップで確認　→</a></div>
         </div>
      </div>
       `;
+      const myElement = shadow.getElementById('button');
+        myElement.addEventListener('click', function(e)  {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            console.log(targetId);
+            var firstChar = targetId.charAt(0); // 最初の文字を取得
+            if(firstChar=="n"){
+                showmap();
+                smoothScroll(targetId);
+            }else if(firstChar=="m"){
+                showlist();
+                smoothScroll(targetId);
+            }
+        })  ;
+    function showlist(){
+        $("#list-button").addClass("active");
+        $("#list-button").closest(".NAV").addClass("active");
+        $("#map-button").removeClass("active");
+        $("#map-button").closest(".NAV").removeClass("active");
+        $("#map").hide();
+        $("#list").show();
     }
-  }
+    function showmap(){
+        $("#map-button").addClass("active");
+        $("#map-button").closest(".NAV").addClass("active");
+        $("#list-button").removeClass("active");
+        $("#list-button").closest(".NAV").removeClass("active");
+        $("#list").hide();
+        $("#map").show();
+    }
+    function smoothScroll(targetId) {
+        const targetElement = document.getElementById(targetId);
+        console.log(targetElement)
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+    }
+      
+}
   
   customElements.define("plan-list", plan_list); 

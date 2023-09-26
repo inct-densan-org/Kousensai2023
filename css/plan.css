@@ -236,6 +236,7 @@ header .title{
     color: var(--header-color);
     width: 100vw;
     text-align: center;
+    padding: 3% 0;
 }
 .maptemp{
     max-width: 900px;
@@ -259,12 +260,12 @@ header .title{
     align-items: center;
   }
   .maptemp ol li{
-    width: 50%;
+    width: 70%;
     position:relative;
     margin: 7px 10px 7px 0px;
     padding-left:40px;
     font-weight: bold;
-    font-size:18px;
+    font-size:20px;
     line-height: 30px;
     border: solid 1px var(--main-color);
     border-radius:20px;
@@ -274,6 +275,11 @@ header .title{
     -ms-transition: 0.3s;
     transition: 0.3s;
   }
+  .maptemp ol li a{
+    color: var(--main-color);
+    width: 100%;
+  }
+  
   .maptemp ol li:before{
     counter-increment: list;
     content: counter(list);
@@ -297,6 +303,10 @@ header .title{
   #outside{
     height: 370px;
   }
+  #outside li{
+    width: 50%;
+    font-size: 18px;
+  }
   #n20::before{counter-increment: list 20; content: counter(list);}
   #n25::before{counter-increment: list 25; content: counter(list);}
   #n29::before{counter-reset: list 0; counter-increment: list 29; content: counter(list);}
@@ -318,6 +328,9 @@ header .title{
   .maptemp ol li:hover:before{
     background: #fff;
     color: var(--main-color);
+  }
+  .maptemp ol li:hover a{
+    color: white;
   }
 .map_headline{
     display: flex;
@@ -353,8 +366,6 @@ header .title{
     height: 60px;
     width: 60px;
 }
-#n1{top: 74%; left: 34%;}#n2{top: 78%; left: 56%;}#n3{top: 59%; left: 44%;}
-#n4{top: 4%; left: 23%;}#n5{top: 13%; left: 2%;}
 /* フッター */
 .copyright{
     background-color: var(--footer-color-deep);

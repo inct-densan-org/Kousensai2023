@@ -19,6 +19,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+
     
 </head>
 <body>
@@ -69,40 +71,45 @@
                 <div class="screen_map pannel" id="map">
                     <div class="map_headline"><h1>全体マップ</h1></div>
                     <div class="maptemp">
-                        
-                        <img src="./image/campus.jpg"  alt="企画マップの全体図" style="max-height: 610px;"/>
-                        
+                    <img src="./image/campus.jpg" usemap="#ImageMap" alt="企画マップの全体図" style="max-height: 610px;"/>
+                    <map name="ImageMap">
+                        <area shape="rect" coords="652,11,920,429" href="#taiiku1" alt="" />
+                        <area shape="rect" coords="4,218,281,691" href="#taiiku2" alt="" />
+                        <area shape="rect" coords="1258,1127,1703,1585" href="#kyouikuka1" alt="" />
+                        <area shape="rect" coords="948,1650,1263,1966" href="#yatai" alt="" />
+                        <area shape="rect" coords="1580,1746,1926,2123" href="#senkouka1" alt="" />
+                    </map>
                     </div>
                     <div id="yatai" class="maptemp">
-                        <div class="map_headline"><h1><span class="Dnumber">1</span>　屋外</h1></div>
+                        <div class="map_headline" ><h1><span class="Dnumber">1</span>　屋外</h1></div>
                         <img src="./image/屋台.jpg" alt="" >
                         <ol id="outside">
-                            <li>カルスト珈琲</li>
-                            <li>フルーツキャンデーランド</li>    
-                            <li>WoodStock</li>    
-                            <li>タイ焼きショップスイミー</li>    
-                            <li>JK-café</li>    
-                            <li>豆屋２</li>    
-                            <li>Suzuki Lab</li>    
-                            <li>らあめん屋猛拳</li>    
-                            <li>#高専ワッフル</li>    
-                            <li>International kitchen</li>
-                            <li>ホットドッグ</li>
-                            <li>米屋のおにぎり</li>    
-                            <li>スイーツコンシェルジュが創るフレンチトースト</li>    
-                            <li>うちやなげやたのしめや 射的＆輪投げ</li>    
-                            <li>総合技研部 5-inch GaugeProject</li>    
+                            <li id="n1"><a href="#m1">カルスト珈琲</a></li>
+                            <li id="n2"><a href="#m2">フルーツキャンデーランド</a></li>    
+                            <li id="n3"><a href="#m3">WoodStock</a></li>    
+                            <li id="n4"><a href="#m4">タイ焼きショップスイミー</a></li>    
+                            <li id="n5"><a href="">JK-café</a></li>    
+                            <li id="n6"><a href="">豆屋２</a></li>    
+                            <li id="n7"><a href="">Suzuki Lab</a></li>    
+                            <li id="n8"><a href="">らあめん屋猛拳</a></li>    
+                            <li id="n9"><a href="">#高専ワッフル</a></li>    
+                            <li id="n10"><a href="">International kitchen</a></li>
+                            <li id="n11"><a href="">ホットドッグ</a></li>
+                            <li id="n12"><a href="">米屋のおにぎり</a></li>    
+                            <li id="n13"><a href="">スイーツコンシェルジュが創るフレンチトースト</a></li>    
+                            <li id="n14"><a href="">うちやなげやたのしめや 射的＆輪投げ</a></li>    
+                            <li id="n15"><a href="">総合技研部 5-inch GaugeProject</a></li>    
                         </ol>
                     </div>
                     
                     <div id="senkouka1" class="maptemp">
-                        <div class="map_headline"><h1><span class="Dnumber">2</span>　専攻科棟１階</h1></div>
+                        <div class="map_headline" ><h1><span class="Dnumber">2</span>　専攻科棟１階</h1></div>
                         <img src="./image/専攻科１階.jpg" alt="">
                         <ol>
-                                <li id="n20">OBO-TAPI：講義室 2</li>
-                                <li>アトリエひまわり</li>
-                                <li>ガンプラ展示会：講義室 1</li>
-                                <li id="n29">高専ロボコン参加ロボットの実演</li>
+                                <li id="n20"><a href="">OBO-TAPI：講義室 2</a></li>
+                                <li><a href="">アトリエひまわり</a></li>
+                                <li><a href="">ガンプラ展示会：講義室 1</a></li>
+                                <li id="n29"><a href="">高専ロボコン参加ロボットの実演</a></li>
                         </ol>
                     </div>
                     
@@ -111,57 +118,64 @@
                         <img src="./image/専攻科２階.jpg" alt="">
                         <ol>
                                 
-                                <li id="n25">頭文字 K</li>
-                                <li id="n292">高専ロボコン簡易ロボットによる体験型ゲーム</li>
+                                <li id="n25"><a href="">頭文字 K</a></li>
+                                <li id="n292"><a href="">高専ロボコン簡易ロボットによる体験型ゲーム</a></li>
                         </ol>
                     </div>
                     <div id="kyouikuka1" class="maptemp">
-                        <div class="map_headline"><h1>　教育科棟１階</h1></div>
+                        <div class="map_headline" ><h1><span class="Dnumber">3</span>　教育科棟１階</h1></div>
                         <img src="./image/教育科棟１階.jpg" alt="">
                         <ol>
-                                <li id="n17">マッチョ BAR</li>
-                                <li id="">喫茶処ちゃぐまっちゃ</li>
-                                <li id="n28">電算部ゲーム・デジタルアート展</li>
-                                <li id="n32">バザー</li>
+                                <li id="n17"><a href="">マッチョ BAR</a></li>
+                                <li id="n18"><a href="">喫茶処ちゃぐまっちゃ</a></li>
+                                <li id="n28"><a href="">電算部ゲーム・デジタルアート展</a></li>
+                                <li id="n32"><a href="">バザー</a></li>
                         </ol>
                     </div>
                     <div id="kyouikuka2" class="maptemp">
                         <div class="map_headline"><h1>　教育科棟２階</h1></div>
                         <img src="./image/教育科棟２階.jpg" alt="">
                         <ol>
-                                <li id="n16">カフェ Lab</li>
-                                <li id="n19">ITs</li>
-                                <li id="n27">昔ばなし「桃太郎」</li>
-                                <li id="n31">留学生会</li>
+                                <li id="n16"><a href="">カフェ Lab</a></li>
+                                <li id="n19"><a href="">ITs</a></li>
+                                <li id="n27"><a href="">昔ばなし「桃太郎」</a></li>
+                                <li id="n31"><a href="">留学生会</a></li>
                         </ol>
                     </div>
                     <div id="kyouikuka3" class="maptemp">
                         <div class="map_headline"><h1>　教育科棟３階</h1></div>
                         <img src="./image/教育科棟３階.jpg" alt="">
                         <ol>
-                                <li id="n23">倶楽部麻沙美</li>
-                                <li id="">3C お化け屋敷</li>
-                                <li id="n26">写真館 Fixious</li>
-                                <li id="n30">総合科学領域展示</li>
+                                <li id="n23"><a href="">倶楽部麻沙美</a></li>
+                                <li id=""><a href="">3C お化け屋敷</a></li>
+                                <li id="n26"><a href="">写真館 Fixious</a></li>
+                                <li id="n30"><a href="">総合科学領域展示</a></li>
                         </ol>
                     </div>
-                 
+                    <div id="taiiku1" class="maptemp">
+                        <div class="map_headline" ><h1><span class="Dnumber">4</span>　第一体育館</h1></div>
+                        <img src="./image/times.jpg" alt="">
+                    </div>
+                    <div id="taiiku2" class="maptemp">
+                        <div class="map_headline" ><h1><span class="Dnumber">5</span>　第二体育館</h1></div>
+                        <img src="./image/times.jpg" alt="">
+                    </div>
                 </div>
                 <!-- 企画一覧のとき-->
                 <div class="screen_list pannel" id="list">
                     <div class="list_backgroud">
-                        <plan-list imgurl="./image/posta.jpg" genre="展示" headline="㉘ゲーム＆デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="教育科棟1階　総合センター" href="#ff"></plan-list>
-                        <plan-list imgurl="./image/bananaposta.jpg" genre="屋台・ばなな" headline="⑲ばななや" text="ばななはおいしそうですね。ぜひいきましょう" place="メディアセンター前駐車場" href="#aa"></plan-list>
-                        <plan-list imgurl="./image/sugio.jpg" genre="領域展示" headline="⑧先生のなんかすごいやつ" text="なんか先生がultraスーパーすごいやつをつくったようなのでみてみてくだしあ" place="専攻科棟１階　２Mのとこ" href="#aa"></plan-list>
-                        <plan-list imgurl="./image/posta.jpg" genre="展示" headline="㉘ゲーム＆デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="教育科棟1階　総合センター" href="#ff"></plan-list>
-                        <plan-list imgurl="./image/bananaposta.jpg" genre="屋台・ばなな" headline="⑲ばななや" text="ばななはおいしそうですね。ぜひいきましょう" place="メディアセンター前駐車場" href="#aa"></plan-list>
-                        <plan-list imgurl="./image/sugio.jpg" genre="領域展示" headline="⑧先生のなんかすごいやつ" text="なんか先生がultraスーパーすごいやつをつくったようなのでみてみてくだしあ" place="専攻科棟１階　２Mのとこ" href="#aa"></plan-list>
-                        <plan-list imgurl="./image/posta.jpg" genre="展示" headline="㉘ゲーム＆デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="教育科棟1階　総合センター" href="#ff"></plan-list>
-                        <plan-list imgurl="./image/bananaposta.jpg" genre="屋台・ばなな" headline="⑲ばななや" text="ばななはおいしそうですね。ぜひいきましょう" place="メディアセンター前駐車場" href="#aa"></plan-list>
-                        <plan-list imgurl="./image/sugio.jpg" genre="領域展示" headline="⑧先生のなんかすごいやつ" text="なんか先生がultraスーパーすごいやつをつくったようなのでみてみてくだしあ" place="専攻科棟１階　２Mのとこ" href="#aa"></plan-list>
-                        <plan-list imgurl="./image/posta.jpg" genre="展示" headline="㉘ゲーム＆デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="教育科棟1階　総合センター" href="#ff"></plan-list>
-                        <plan-list imgurl="./image/bananaposta.jpg" genre="屋台・ばなな" headline="⑲ばななや" text="ばななはおいしそうですね。ぜひいきましょう" place="メディアセンター前駐車場" href="#aa"></plan-list>
-                        <plan-list imgurl="./image/sugio.jpg" genre="領域展示" headline="⑧先生のなんかすごいやつ" text="なんか先生がultraスーパーすごいやつをつくったようなのでみてみてくだしあ" place="専攻科棟１階　２Mのとこ" href="#aa"></plan-list>
+                        <plan-list id="m1" imgurl="./image/posta.jpg" genre="展示" headline="㉘ゲーム＆デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="教育科棟1階　総合センター" href="#n31"></plan-list>
+                        <plan-list id="m2" imgurl="./image/bananaposta.jpg" genre="屋台・ばなな" headline="⑲ばななや" text="ばななはおいしそうですね。ぜひいきましょう" place="メディアセンター前駐車場" href="#n2"></plan-list>
+                        <plan-list id="m3" imgurl="./image/sugio.jpg" genre="領域展示" headline="⑧先生のなんかすごいやつ" text="なんか先生がultraスーパーすごいやつをつくったようなのでみてみてくだしあ" place="専攻科棟１階　２Mのとこ" href="#n3"></plan-list>
+                        <plan-list id="m4" imgurl="./image/posta.jpg" genre="展示" headline="㉘ゲーム＆デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="教育科棟1階　総合センター" href="#n4"></plan-list>
+                        <plan-list id="m5" imgurl="./image/bananaposta.jpg" genre="屋台・ばなな" headline="⑲ばななや" text="ばななはおいしそうですね。ぜひいきましょう" place="メディアセンター前駐車場" href="#n5"></plan-list>
+                        <plan-list id="m6" imgurl="./image/sugio.jpg" genre="領域展示" headline="⑧先生のなんかすごいやつ" text="なんか先生がultraスーパーすごいやつをつくったようなのでみてみてくだしあ" place="専攻科棟１階　２Mのとこ" href="#n6"></plan-list>
+                        <plan-list id="m7" imgurl="./image/posta.jpg" genre="展示" headline="㉘ゲーム＆デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="教育科棟1階　総合センター" href="#n7"></plan-list>
+                        <plan-list id="m8" imgurl="./image/bananaposta.jpg" genre="屋台・ばなな" headline="⑲ばななや" text="ばななはおいしそうですね。ぜひいきましょう" place="メディアセンター前駐車場" href="#n8"></plan-list>
+                        <plan-list id="m9" imgurl="./image/sugio.jpg" genre="領域展示" headline="⑧先生のなんかすごいやつ" text="なんか先生がultraスーパーすごいやつをつくったようなのでみてみてくだしあ" place="専攻科棟１階　２Mのとこ" href="#n9"></plan-list>
+                        <plan-list id="m10" imgurl="./image/posta.jpg" genre="展示" headline="㉘ゲーム＆デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="教育科棟1階　総合センター" href="#n10"></plan-list>
+                        <plan-list id="m11" imgurl="./image/bananaposta.jpg" genre="屋台・ばなな" headline="⑲ばななや" text="ばななはおいしそうですね。ぜひいきましょう" place="メディアセンター前駐車場" href="#n11"></plan-list>
+                        <plan-list id="m12" imgurl="./image/sugio.jpg" genre="領域展示" headline="⑧先生のなんかすごいやつ" text="なんか先生がultraスーパーすごいやつをつくったようなのでみてみてくだしあ" place="専攻科棟１階　２Mのとこ" href="#n12"></plan-list>
                     </div>
                     
                 </div>
