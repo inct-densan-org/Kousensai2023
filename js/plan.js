@@ -40,12 +40,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 function showlist(){
+    
     $("#list-button").addClass("active");
     $("#list-button").closest(".NAV").addClass("active");
     $("#map-button").removeClass("active");
     $("#map-button").closest(".NAV").removeClass("active");
     $("#map").hide();
     $("#list").show();
+    const allOlElements = document.querySelectorAll("ol");
+
+    
 }
 function showmap(){
     $("#map-button").addClass("active");
@@ -54,12 +58,27 @@ function showmap(){
     $("#list-button").closest(".NAV").removeClass("active");
     $("#list").hide();
     $("#map").show();
+    const allOlElements = document.querySelectorAll("ol");
+
+    
 }
 $(function(){
     $("#map-button").on("click",function(){
+        
         showmap()
     })
     $("#list-button").on("click",function(){
+        const allOlElements = document.querySelectorAll("ol");
+        // すべての<ol>要素に対して処理を行うループ
+        allOlElements.forEach((ol) => {
+        // <ol>要素の下にあるすべての<li>要素を取得
+        const liElements = ol.querySelectorAll("li");
+    
+        // すべての<li>要素からactiveクラスを削除
+            liElements.forEach((li) => {
+                li.classList.remove("active");
+                });
+            });
         showlist()
     })
         
