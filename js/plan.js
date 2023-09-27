@@ -1,7 +1,9 @@
    // スムーズスクロールの関数を定義
+   const targetElement = document.getElementById("yatai");
+   console.log(targetElement.offsetTop+targetElement.offsetHeight)
 function smoothScroll(targetId) {
     const targetElement = document.getElementById(targetId);
-    console.log(targetElement)
+    
     if (targetElement) {
         window.scrollTo({
             top: targetElement.offsetTop,
@@ -16,7 +18,7 @@ document.querySelectorAll('area[href^="#"]').forEach(anchor => {
         
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
-        console.log(targetId);
+        
         smoothScroll(targetId);
     });
 });
@@ -25,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
-        console.log(targetId);
+        console.log(targetId)
         var firstChar = targetId.charAt(0); // 最初の文字を取得
         if(firstChar=="n"){
             showmap();
@@ -68,10 +70,13 @@ $(function(){
                 $BurgerMenu.removeClass("active");
                 $BurgerIcon.removeClass("bi-x");
                 $BurgerIcon.addClass("bi-list");
+                $("body").css("overflow","auto");
+                
             }else{
                 $BurgerMenu.addClass("active");
                 $BurgerIcon.removeClass("bi-list");
                 $BurgerIcon.addClass("bi-x");
+                $("body").css("overflow", "hidden");
             }
         })
 })
@@ -201,11 +206,42 @@ window.addEventListener("load", () => {
         myElement.addEventListener('click', function(e)  {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
-            console.log(targetId);
+            console.log(targetId +"!!!");
+            const targetLi = document.getElementById(targetId);
+            // すべての<ol>要素を取得
+            const allOlElements = document.querySelectorAll("ol");
+
+            // すべての<ol>要素に対して処理を行うループ
+            allOlElements.forEach((ol) => {
+            // <ol>要素の下にあるすべての<li>要素を取得
+            const liElements = ol.querySelectorAll("li");
+
+            // すべての<li>要素からactiveクラスを削除
+                liElements.forEach((li) => {
+                    li.classList.remove("active");
+                });
+            });
+            // 最初に取得した<li>要素にactiveクラスを追加
+            targetLi.classList.add("active");
+            var substring = targetId.substring(1);
+            var subint=parseInt(substring)
             var firstChar = targetId.charAt(0); // 最初の文字を取得
+            
             if(firstChar=="n"){
                 showmap();
-                smoothScroll(targetId);
+                if(subint<=15){
+                    smoothScroll("outside");
+                }else if(20<=subint&&subint<23||subint==29){
+                    smoothScroll("senkouka1")
+                }else if(subint==25||subint==292){
+                    smoothScroll("senkouka2")
+                }else if(17==subint||subint==18||subint==28||subint==32){
+                    smoothScroll("kyouikuka1")
+                }else if(subint==16||subint==29||subint==27||subint==31){
+                    smoothScroll("kyouikuka2")
+                }else if(23==subint||subint==24||subint==26||subint==30){
+                    smoothScroll("kyouikuka3")
+                }
             }else if(firstChar=="m"){
                 showlist();
                 smoothScroll(targetId);
@@ -227,18 +263,43 @@ window.addEventListener("load", () => {
         $("#list").hide();
         $("#map").show();
     }
+    function Onactive(targetid) {
+        targetid.addClass("active")
+      }
+      function Offactive(targetid) {
+        targetid.removeClass("active")
+      }
     function smoothScroll(targetId) {
         const targetElement = document.getElementById(targetId);
-        console.log(targetElement)
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
+        console.log(targetId)
+        console.log(targetElement.offsetTop+targetElement.offsetHeight)
+        if(window.innerWidth<900){
+            if (targetId=="outside") {
+                window.scrollTo({
+                    top: targetElement.offsetTop+targetElement.offsetHeight/2,
+                    behavior: 'smooth'
+                });}else{
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+        }else{
+            if (targetId=="outside") {
+                window.scrollTo({
+                    top: targetElement.offsetTop+targetElement.offsetHeight,
+                    behavior: 'smooth'
+                });
+            }else{
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         }
+        
     }
     }
       
 }
-  
   customElements.define("plan-list", plan_list); 

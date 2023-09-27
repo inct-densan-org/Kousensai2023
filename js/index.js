@@ -7,10 +7,13 @@ $(function(){
                 $BurgerMenu.removeClass("active");
                 $BurgerIcon.removeClass("bi-x");
                 $BurgerIcon.addClass("bi-list");
+                $("body").css("overflow","auto");
+                
             }else{
                 $BurgerMenu.addClass("active");
                 $BurgerIcon.removeClass("bi-list");
                 $BurgerIcon.addClass("bi-x");
+                $("body").css("overflow", "hidden");
             }
         })
         var $pc_BurgerIcon=$(this).find("#pc_i");
