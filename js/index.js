@@ -2,6 +2,8 @@ $(function(){
     $("#header").each(function(){
         var $BurgerIcon=$(this).find("#sumaho_i");
         var $BurgerMenu=$(this).find("#sumaho_burger");
+        
+        
         $BurgerIcon.on("click",function(){
             if($BurgerMenu.hasClass("active")){
                 $BurgerMenu.removeClass("active");
@@ -26,6 +28,11 @@ $(function(){
                 $pc_BurgerIcon.removeClass("bi-list");
                 $pc_BurgerIcon.addClass("bi-x");
             }
+            $(window).resize(function(){
+                $pc_BurgerMenu.removeClass("active");
+                    $pc_BurgerIcon.removeClass("bi-x");
+                    $pc_BurgerIcon.addClass("bi-list");
+              });
         })
     })
 })
