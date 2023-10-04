@@ -200,6 +200,7 @@ header .title{
     font-size: 10px;
     line-height: 15px;
     padding: 10px;
+
     color: white;
 }
 .footer-info{
@@ -211,6 +212,15 @@ header .title{
 .footer-info a{
     text-align: center;
     border-bottom: #fff 1px solid ;
+}
+.footer-info a i{
+    border-bottom: none;
+    font-size: 2rem;
+}
+.footer-info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
 }
 .footer-info ul{
     width: 100%;
@@ -276,5 +286,61 @@ div.address {
     }
     .back_2{
         font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    header .title{
+        font-size: 40px ;
+    }
+    div.address {
+        width: 100% ;
+        
+    }
+    .kv .main-copy{
+        font-size: 2.5rem;
+        margin: 30px 10px;
+    }
+    
+    .fs-5{
+        font-size: 1rem !important;
+    }
+    header .nav{
+        font-size: xx-large;
+    }
+    .time{
+        width: 80%;
+    }
+    .kv h1{
+        width: 100%;
+        font-size: 2rem;
+    }
+    .kv h2{
+        font-size: 1.7rem;
+    }
+    .backgroud_table_2 p{
+        padding-top: 3%;
+        font-size: 1.1rem;
+    }
+    .backgroud_table_1 p{
+        padding-top: 3%;
+        font-size: 1.1rem;
+    }
+    .backgroud_table_1 h1{
+        font-size: 2.5rem;
+    }
+    .backgroud_table_2 h1{
+        font-size: 2.5rem;
+    }
+    .plan_button {
+        font-size: 1.3rem;
+    }
+    .table_element{
+        padding: 2% 5%;
+        width: 100%;
+    }
+    .footer-info img {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
     }
   }

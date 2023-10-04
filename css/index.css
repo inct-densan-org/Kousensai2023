@@ -438,12 +438,21 @@ header .title{
 .footer-info{
     background-color: var(--footer-color);
     padding: 10px;
-    width: 100vw;
+    width: 100%;
     min-height: 250px;
 }
 .footer-info a{
     text-align: center;
     border-bottom: #fff 1px solid ;
+}
+.footer-info a i{
+    border-bottom: none;
+    font-size: 2rem;
+}
+.footer-info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
 }
 .footer-info ul{
     width: 100%;
@@ -456,7 +465,7 @@ header .title{
     display: inline;
 }
 footer{
-    width: 100vw;
+    width: 100%;
     min-height: 280px;
     z-index: 3333;
     position: relative;
@@ -486,10 +495,7 @@ div.address {
     font-size: small;
     line-height: 14px;
 }
-@media screen and (max-width: 1124px) {
-
-}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     header .title{
         font-size: 40px ;
     }
@@ -497,13 +503,11 @@ div.address {
         width: 100% ;
         
     }
-    .table_element{
-        padding: 5%;
-        width: 93%;
-    }
     .kv .main-copy{
-        font-size: 3rem;
+        font-size: 2.5rem;
+        margin: 30px 10px;
     }
+    
     .fs-5{
         font-size: 1rem !important;
     }
@@ -538,7 +542,12 @@ div.address {
         font-size: 1.3rem;
     }
     .table_element{
-        padding: 2%;
+        padding: 2% 5%;
         width: 100%;
+    }
+    .footer-info img {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
     }
   }
