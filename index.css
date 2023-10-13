@@ -28,12 +28,12 @@
 html {
     font-size: 100%;
     scroll-behavior: smooth;
-    
   }
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
     color: #494949;
+    overflow-x: hidden;
 }
 
 a {
@@ -64,7 +64,7 @@ li {
 /* ヘッダー */
 header{
     border-bottom: 2px white solid;
-    width: 100%;
+    width: 100vw;
 }
 header .nav{
     color: white !important;
@@ -87,10 +87,25 @@ header .title{
 .Re{
     font-family: serif;
 }
+#sumaho_i{
+    z-index: 999; 
+    position: fixed;
+    right: 15px;
+    color: white;
+    /* background-color: rgb(100, 169, 199); */
+    height: 32px;
+    display: flex;
+}
+#sumaho_i.active2{
+    color: #000461;
+}
+#sumaho_i.active2.active{
+    color: white;
+}
 #sumaho_burger{
-    z-index: 2;
+    z-index: 99;
     background-color: rgb(100, 169, 199);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -99,10 +114,8 @@ header .title{
     opacity: 0;
     pointer-events: none;
     transition: all 0.35s ease;
-    overflow: auto;
 }
 #sumaho_burger.active{
-    overflow: hidden;
     pointer-events: all;
     opacity: 1;
     transition: all 0.35s ease;
@@ -213,7 +226,7 @@ header .title{
     text-align: center;
     line-height: 1;
     letter-spacing: .2em;
-    margin: 30px 10px;
+    margin: 30px;
     
   }
   
@@ -235,7 +248,7 @@ header .title{
     color: white;
     border-bottom:2px white solid ;
     padding-bottom: 2%;
-    font-size: 3.3rem;
+    font-size: 3.5rem;
     margin: auto;
     width: 90%;
   }
@@ -280,7 +293,7 @@ header .title{
     overflow-y: hidden;
 }
 .backgroud_table_1{
-    /* width: 100%; */
+    /* width: 100vw; */
     max-width: 1000px;
     padding: 30px 0;
     background-color: var(--backgroud-color);
@@ -306,9 +319,7 @@ header .title{
     height: 95%;
     
 }
-.table_element img{
-    border-radius: 20px;
-}
+
 .acsent{
     color: var(--acsent-color);
 }
@@ -368,6 +379,15 @@ header .title{
 .hello_text p{
     font-size: larger;
 }
+.yokoku{
+    width: 100%;
+    text-align: center;
+}
+.yokoku iframe{
+    width: 700px;
+    height: auto;
+    aspect-ratio: 16/9;
+}
 /* 企画について */
 .plan_backgroud{
     background-color: white;
@@ -411,6 +431,30 @@ header .title{
     margin: auto;
     font-size: 1.2rem;
 }
+/* 運行表 */
+table{
+    border: 5px var(--sub-color) solid;
+}
+.schedule{
+    width: 60%;
+    margin: auto;
+}
+.schedule th{
+    font-size: 1.4rem;
+    text-align: center;
+    border: 2px solid var(--sub-color);
+    color: var(--text-color);
+}
+.scheduleh1{
+    text-align: center;
+    color: var(--text-color);
+}
+.schedule td{
+    text-align: center;
+    font-size: 1.3rem;
+    border: 2px solid var(--sub-color);
+    color: var(--para-color);
+}
 /* Google Mapを囲う要素 */
 .map {
     position: relative;
@@ -428,9 +472,7 @@ header .title{
     width: 100%;
     height: 100%;
   }
-.pdf a{
-    color: blue;
-}
+  
 /* フッター */
 .copyright{
     background-color: var(--footer-color-deep);
@@ -473,7 +515,7 @@ header .title{
 footer{
     width: 100%;
     min-height: 280px;
-    z-index: 3333;
+    z-index: 33;
     position: relative;
 }
 div.address {
@@ -501,10 +543,11 @@ div.address {
     font-size: small;
     line-height: 14px;
 }
-@media screen and (max-width: 1124px) {
-
-}
 @media screen and (max-width: 992px) {
+    .yokoku iframe{
+        width: 100%;
+        height: auto;
+    }
     header .title{
         font-size: 40px ;
     }
@@ -547,6 +590,9 @@ div.address {
     .backgroud_table_2 h1{
         font-size: 2.5rem;
     }
+    .plan_backgroud{
+        max-width: 412px;
+    }
     .plan_button {
         font-size: 1.3rem;
     }
@@ -558,5 +604,18 @@ div.address {
         width: 40px;
         height: 40px;
         border-radius: 5px;
+    }
+    .schedule{
+        width: 100%;
+        margin: auto;
+    }
+    .schedule th{
+        font-size: 1.3rem;
+    }
+    .schedule td{
+        font-size: 1.2rem;
+    }
+    .scheduleh1{
+        font-size: 1.9rem;
     }
   }

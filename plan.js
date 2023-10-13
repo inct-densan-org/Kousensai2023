@@ -173,14 +173,16 @@ window.addEventListener("load", () => {
     }
     .list_content h3{
         margin-top: 2%;
-        font-size: large;
+        font-size: larger;
         font-weight: normal;
         line-height: 1.2;
         color: var(--para-color);
+        margin-bottom: 6px;
     }
     .list_content p{
         color: var(--acsent-color);
         font-size: 1.1rem;
+        margin:0;
     }
     .list_button{
         position: absolute;
