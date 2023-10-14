@@ -1,6 +1,6 @@
    // スムーズスクロールの関数を定義
    const targetElement = document.getElementById("yatai");
-   console.log(targetElement.offsetTop+targetElement.offsetHeight)
+   
 function smoothScroll(targetId) {
     const targetElement = document.getElementById(targetId);
     
@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
-        console.log(targetId)
+        
         var firstChar = targetId.charAt(0); // 最初の文字を取得
         if(firstChar=="n"){
             showmap();
@@ -62,6 +62,20 @@ function showmap(){
 
     
 }
+function burgurchange(target){
+    let targetid="#"+target;
+    let scrolltop=$(window).scrollTop();
+    if ( scrolltop<= 100) {
+        $(targetid).removeClass("active2");
+    } else{
+        $(targetid).addClass("active2");
+    }
+
+}
+document.addEventListener("scroll", (event) => {
+    burgurchange("sumaho_i");
+  
+  });
 $(function(){
     $("#map-button").on("click",function(){
         
@@ -113,7 +127,7 @@ window.addEventListener("load", () => {
       // ここにボタンからアクセスされた場合の特別な処理を追加
     } else {
         showmap()
-      console.log("通常のリンクからアクセスされました。");
+      
       // 通常のリンクからアクセスされた場合の処理を追加
     }
   });
@@ -227,7 +241,7 @@ window.addEventListener("load", () => {
         myElement.addEventListener('click', function(e)  {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
-            console.log(targetId +"!!!");
+            
             const targetLi = document.getElementById(targetId);
             // すべての<ol>要素を取得
             const allOlElements = document.querySelectorAll("ol");
@@ -250,18 +264,22 @@ window.addEventListener("load", () => {
             
             if(firstChar=="n"){
                 showmap();
-                if(subint<=15){
+                if(subint<=15||subint==41||subint==42){
                     smoothScroll("outside");
                 }else if(20<=subint&&subint<23||subint==29){
                     smoothScroll("senkouka1")
-                }else if(subint==25||subint==292){
+                }else if(subint==25||subint==292||subint==30){
                     smoothScroll("senkouka2")
-                }else if(17==subint||subint==18||subint==28||subint==32){
+                }else if(34==subint||subint==36||subint==35){
+                    smoothScroll("senkouka3")
+                }else if(17==subint||subint==18||subint==28||subint==33||subint==37||subint==38){
                     smoothScroll("kyouikuka1")
-                }else if(subint==16||subint==29||subint==27||subint==31){
+                }else if(subint==16||subint==19||subint==27||subint==32||subint==38||subint==39){
                     smoothScroll("kyouikuka2")
-                }else if(23==subint||subint==24||subint==26||subint==30){
+                }else if(23==subint||subint==24||subint==26||subint==31){
                     smoothScroll("kyouikuka3")
+                }else if(40==subint||subint==44){
+                    smoothScroll("taiiku1")
                 }
             }else if(firstChar=="m"){
                 showlist();
@@ -292,8 +310,8 @@ window.addEventListener("load", () => {
       }
     function smoothScroll(targetId) {
         const targetElement = document.getElementById(targetId);
-        console.log(targetId)
-        console.log(targetElement.offsetTop+targetElement.offsetHeight)
+        
+        
         if(window.innerWidth<900){
             if (targetId=="outside") {
                 window.scrollTo({

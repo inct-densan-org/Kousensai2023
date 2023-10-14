@@ -79,6 +79,21 @@ header .title{
 .Re{
     font-family: serif;
 }
+#sumaho_i{
+    z-index: 999; 
+    position: fixed;
+    right: 15px;
+    color: white;
+    /* background-color: rgb(100, 169, 199); */
+    height: 32px;
+    display: flex;
+}
+#sumaho_i.active2{
+    color: #000461;
+}
+#sumaho_i.active2.active{
+    color: white;
+}
 #sumaho_burger{
     z-index: 2;
     background-color: rgb(100, 169, 199);
@@ -302,7 +317,7 @@ header .title{
     transform: translateY(-50%);
   }
   #outside{
-    height: 380px;
+    height: 420px;
   }
   #outside li{
     width: 50%;
@@ -322,6 +337,18 @@ header .title{
   #n30::before{counter-reset: list 0; counter-increment: list 30; content: counter(list);}
   #n26::before{counter-reset: list 0; counter-increment: list 26; content: counter(list);}
   #n23::before{ counter-increment: list 23; content: counter(list);}
+  #n33::before{counter-reset: list 0; counter-increment: list 33; content: counter(list);}
+  #n34::before{ counter-increment: list 34; content: counter(list);}
+  #n41::before{counter-reset: list 0; counter-increment: list 41; content: counter(list);}
+  #n37::before{counter-reset: list 0; counter-increment: list 37; content: counter(list);}
+  #n39::before{counter-reset: list 0; counter-increment: list 39; content: counter(list);}
+  #n382::before{counter-reset: list 0; counter-increment: list 38; content: counter(list);}
+  #n38::before{counter-reset: list 0; counter-increment: list 38; content: counter(list);}
+  #n42::before{counter-reset: list 0; counter-increment: list 42; content: counter(list);}
+  #n40::before{counter-reset: list 0; counter-increment: list 40; content: counter(list);}
+  #n412::before{counter-reset: list 0; counter-increment: list 41; content: counter(list);}
+  #n44::before{counter-reset: list 0; counter-increment: list 44; content: counter(list);}
+  #n442::before{counter-reset: list 0; counter-increment: list 44; content: counter(list);}
   .maptemp ol li:hover{
     background: var(--main-color);
     color: #fff;
@@ -344,6 +371,11 @@ header .title{
   .maptemp ol li.active a{
     color: white;
   }
+.PC_time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .map_headline{
     display: flex;
     align-items: center;
@@ -496,6 +528,9 @@ div.address {
   @media screen and (max-width: 900px) {
     #outside li {
         width: 100%;
+        font-size: 16px;
+    }
+    #outside #n13{
         font-size: 14px;
     }
     .number{
@@ -518,7 +553,7 @@ div.address {
     .maptemp ol li{
         width: 100%;
         margin: 3px 0px 3px 0px;
-        font-size: 13px;
+        font-size: 16px;
     }
     .screen_map{
         padding: 0 5%;
