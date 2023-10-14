@@ -1,15 +1,15 @@
 /* フォントの定義 */
 @font-face {
 	font-family: 'site-title';
-	src: url(../font/sitetitle.otf);
+	src: url(font/sitetitle.otf);
 }
 @font-face {
 	font-family: 'soukou';
-	src: url(../font/SoukouMincho.ttf);
+	src: url(font/SoukouMincho.ttf);
 }
 @font-face {
     font-family: "comming";
-    src: url(../font/BebasNeue-Regular.ttf);
+    src: url(font/BebasNeue-Regular.ttf);
 }
 :root{
     --box-shadow : 0 8px 20px rgba(0,0,0,0.2);

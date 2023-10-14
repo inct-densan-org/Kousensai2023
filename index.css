@@ -1,11 +1,11 @@
 /* フォントの定義 */
 @font-face {
 	font-family: 'site-title';
-	src: url(../font/sitetitle.otf);
+	src: url(font/sitetitle.otf);
 }
 @font-face {
 	font-family: 'soukou';
-	src: url(../font/SoukouMincho.ttf);
+	src: url(font/SoukouMincho.ttf);
 }
 
 
