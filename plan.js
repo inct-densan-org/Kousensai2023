@@ -101,15 +101,16 @@ $(function(){
         $BurgerIcon.on("click",function(){
             if($BurgerMenu.hasClass("active")){
                 $BurgerMenu.removeClass("active");
+                $BurgerIcon.removeClass("active");
                 $BurgerIcon.removeClass("bi-x");
                 $BurgerIcon.addClass("bi-list");
-                $("body").css("overflow","auto");
-                
+                $('body').css('overflow', 'auto');
             }else{
                 $BurgerMenu.addClass("active");
+                $BurgerIcon.addClass("active");
                 $BurgerIcon.removeClass("bi-list");
                 $BurgerIcon.addClass("bi-x");
-                $("body").css("overflow", "hidden");
+                $('body').css('overflow', 'hidden');
             }
         })
 })
@@ -220,6 +221,7 @@ window.addEventListener("load", () => {
     @media screen and (max-width: 768px){
         .list_content{
                 width: 350px;
+                margin:20px auto;
             }
         }
     }
@@ -278,7 +280,7 @@ window.addEventListener("load", () => {
                     smoothScroll("kyouikuka2")
                 }else if(23==subint||subint==24||subint==26||subint==31){
                     smoothScroll("kyouikuka3")
-                }else if(40==subint||subint==44){
+                }else if(40==subint||subint==44||subint==43){
                     smoothScroll("taiiku1")
                 }
             }else if(firstChar=="m"){

@@ -80,7 +80,7 @@ header .title{
     font-family: serif;
 }
 #sumaho_i{
-    z-index: 999; 
+    z-index: 9999; 
     position: fixed;
     right: 15px;
     color: white;
@@ -95,7 +95,7 @@ header .title{
     color: white;
 }
 #sumaho_burger{
-    z-index: 2;
+    z-index: 333;
     background-color: rgb(100, 169, 199);
     width: 100%;
     height: 100vh;
@@ -185,7 +185,7 @@ header .title{
 }
 .list_backgroud{
     display: flex;
-    
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     max-width: 1300px;
@@ -442,7 +442,7 @@ header .title{
 footer{
     width: 100%;
     min-height: 280px;
-    z-index: 3333;
+    z-index: 33;
     position: relative;
 }
 div.address {
