@@ -349,6 +349,7 @@ header .title{
   #n412::before{counter-reset: list 0; counter-increment: list 41; content: counter(list);}
   #n44::before{counter-reset: list 0; counter-increment: list 44; content: counter(list);}
   #n442::before{counter-reset: list 0; counter-increment: list 44; content: counter(list);}
+  #n43::before{counter-reset: list 0; counter-increment: list 43; content: counter(list);}
   .maptemp ol li:hover{
     background: var(--main-color);
     color: #fff;
