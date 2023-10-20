@@ -544,6 +544,7 @@ div.address {
     line-height: 14px;
 }
 @media screen and (max-width: 992px) {
+    
     .yokoku iframe{
         width: 100%;
         height: auto;

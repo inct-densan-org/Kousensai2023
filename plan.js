@@ -274,9 +274,9 @@ window.addEventListener("load", () => {
                     smoothScroll("senkouka2")
                 }else if(34==subint||subint==36||subint==35){
                     smoothScroll("senkouka3")
-                }else if(17==subint||subint==18||subint==28||subint==33||subint==37||subint==38){
+                }else if(17==subint||subint==18||subint==28||subint==33||subint==39){
                     smoothScroll("kyouikuka1")
-                }else if(subint==16||subint==19||subint==27||subint==32||subint==38||subint==39){
+                }else if(subint==16||subint==19||subint==27||subint==32||subint==37||subint==38){
                     smoothScroll("kyouikuka2")
                 }else if(23==subint||subint==24||subint==26||subint==31){
                     smoothScroll("kyouikuka3")
