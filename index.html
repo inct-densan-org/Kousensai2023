@@ -96,7 +96,31 @@
     <!-- メインビジュアル -->
     <!-- とりあえずブレイクポイントをLarge（≥992px）でやってみる -->
     <!-- 予告動画 -->
-    
+        <div class="over-y">
+            <div class="backgroud_table_2">
+                <div class="table_element" style="text-align: center;">
+                    <h1>予告動画</h1>
+                    <div class="youtube" style="aspect-ratio: 16/9; width: 100%;">
+                        <iframe width="560"  height="315" style="margin: 30px 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/KA-vgKIh7KQ?si=Tc7YHu34MwJ2N3eW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    <!-- お知らせ -->
+    <div class="over-y">
+        <div class="backgroud_table_1">
+            <div class="table_element">
+                <h1>お知らせ</h1>
+                <div class="info-groud">
+                    <div class="info-scroll">
+                        <info-element day="2023.10.21 01:00" genre="HP変更" text="高専祭のパンフレットを公開しました！"></info-element>
+                        <info-element day="2023.10.20 15:00" genre="HP変更" text="予告動画とお知らせを追加しました"></info-element>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 開催にあたって -->
     <div class="over-y">
         <article class="backgroud_table_2" id="about">
@@ -170,12 +194,12 @@
                             <!-- <img src="image/owner.jpg" alt="logo" > -->
                         <!-- </div> -->
                         <div class=" hello_text" style="padding-top: 3%;">
-                           <p class=" " >今年度の高専祭実行委員長を務めます4年機械・知能系の杉浦　夢斗です．<br>
-                            この度，一大イベントである高専祭を2023年10月28日(土)，10月29日(日)に開催することとなりました．<br>
-                            感染症の影響で，開催できない年や制限をかけての開催が行われましたが，今年は制限をなくしての開催となります．<br>
-                            各系ごとの展示や学生らの趣向が詰まった企画・ステージなど学生はもちろん，来場者の皆様にも楽しんでいただけるようなイベントをご用意しております．<br>
-                            「Re：」というスローガンのもと，再始動した高専祭をぜひお楽しみください！<br>
-                            最後に，高専祭を開催するにあたり協賛していただいた企業様，協力していただいた学生，教職員の皆様に感謝を申し上げます．</p>
+                           <p class=" " >今年度の高専祭実行委員長を務めます4年機械・知能系の杉浦　夢斗です。<br>
+                            この度、一大イベントである高専祭を2023年10月28日(土)、10月29日(日)に開催することとなりました。<br>
+                            感染症の影響で，開催できない年や制限をかけての開催が行われましたが、今年は制限をなくしての開催となります。<br>
+                            各系ごとの展示や学生らの趣向が詰まった企画・ステージなど学生はもちろん、来場者の皆様にも楽しんでいただけるようなイベントをご用意しております。<br>
+                            「Re：」というスローガンのもと、再始動した高専祭をぜひお楽しみください！<br>
+                            最後に、高専祭を開催するにあたり協賛していただいた企業様、協力していただいた学生、教職員の皆様に感謝を申し上げます。</p>
                          </div>
 
                     </div>
@@ -281,9 +305,9 @@
                         
                         <div class=" col-lg-7 col-12" style="padding-top: 2%;">
                             
-                            <p >当日、会場入口にてパンフレットを配布します！それとは別にこちらで電子版のパンフレットを配布する予定です！</p> 
-                            <p>パンフレットには、企画の詳細や企画マップ、体育館のタイムスケジュールなど様々な情報が入っています！</p>
-                            <!-- <a href="download/test.pdf" download style="color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));">test.pdfをダウンロードする</a> -->
+                            <p >当日、会場入口にてパンフレットを配布します！それとは別にこちらで電子版のパンフレットを配布しています！</p> 
+                            <p>パンフレットには、企画の詳細や企画マップ、体育館のタイムスケジュールなど様々な情報が掲載されています！</p>
+                            <p class="pdf"><a href="/js/pdfjs/web/viewer.html?file=/pdf/2023-10.19.pdf" style="color: #1a0dab;"　target="_blank" rel="noopener">パンフレットを見る</a></p>
                             
                         </div>
                     </div>
@@ -324,6 +348,7 @@
             Copyright © 2023 NIT,Ichinoseki College Festival Executive CommitteeAll rights reserved.
         </div>
     </footer>
+    <script src="./js/pdfjs/build/pdf.js"></script>
     <script src="index.js"> </script>
 </body>
 </html>

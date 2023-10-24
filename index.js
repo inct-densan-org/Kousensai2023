@@ -107,3 +107,79 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         smoothScroll(targetId);
     });
 });
+// 企画リストのコンポーネント化
+class info extends HTMLElement { 
+    constructor() {
+      super();
+    }
+    connectedCallback(){
+        // カスタム要素の中にシャドウDOMを接続する
+      const shadow = this.attachShadow({ mode: 'open' });
+      
+      // HTMLファイルで指定された属性を取り出し、初期表示に使用する
+      const day = this.getAttribute('day') || 'unknown';
+      const genre = this.getAttribute('genre') || 'unknown';
+      const text = this.getAttribute('text') || 'unknown';
+  
+      // (1) このカスタム要素の文書構造を定義する
+      shadow.innerHTML = `
+      <style>
+      .info{
+        display:flex ;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .info-genre{
+        background-color: var(--sub-color);
+        width: 125px;
+        text-align: center;
+        color: white;
+        height: 36px;
+    
+    }
+    
+    .info-text{
+        width: 480px;
+        margin-left: 5%;
+    }
+    .day{
+        width: 180px;
+    }
+    @media screen and (max-width: 992px){
+        .info{
+            display:flex ;
+            justify-content:flex-start;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .info-genre{
+            background-color: var(--sub-color);
+            width: 90px;
+            text-align: center;
+            color: white;
+            height: 24px;
+            font-size: 16px;
+            display:flex ;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .info-text{
+            width: 100%;
+            margin-left: 0;
+            font-size: 20px;
+        }
+        .day{
+            width: 130px;
+            font-size: 16px;
+        }
+        }
+    }
+      </style>
+      <div class="info">
+        <div class="day">${day}</div>
+        <div class="info-genre">${genre}</div>
+        <div class="info-text">${text}</div>
+    </div>
+      `;
+}}customElements.define("info-element", info); 
