@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Re:一関高専祭</title>
+    <meta name="description" content="10月28、29日に開催される一関高専の「第５９回高専祭」についての日程や企画、詳細情報を掲載しています！">
     <link rel="icon" href="./image/schoolbadge.png">
     <!-- Reset - CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -20,6 +21,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+
     
 </head>
 <body>
@@ -38,7 +41,7 @@
               <!-- 画面サイズがmd以下になった時の表示 -->
               <div class="col-5 d-md-none d-block">
                 <ul class="nav">
-                    <i class="bi bi-list" style="z-index: 3;" id="sumaho_i"></i>
+                    <i class="bi bi-list"  id="sumaho_i"></i>
                 </ul>
               </div>
             </div>
@@ -69,13 +72,176 @@
         </div>
                 <!-- mapのとき-->
                 <div class="screen_map pannel" id="map">
-                    Comming　Soon…
-                    <a href="./index.html" class="back">ホームに戻る</a>
+                    <div class="map_headline"><h1>全体マップ</h1></div>
+                    <div class="maptemp">
+                    <img src="./image/campus.jpg" usemap="#ImageMap" alt="企画マップの全体図" style="max-height: 610px;"/>
+                    <map name="ImageMap">
+                        <area shape="rect" coords="652,11,920,429" href="#taiiku1" alt="" />
+                        <area shape="rect" coords="4,218,281,691" href="#taiiku1" alt="" />
+                        <area shape="rect" coords="1258,1127,1703,1585" href="#kyouikuka1" alt="" />
+                        <area shape="rect" coords="948,1650,1263,1966" href="#yatai" alt="" />
+                        <area shape="rect" coords="1580,1746,1926,2123" href="#senkouka1" alt="" />
+                    </map>
+                    </div>
+                    <div id="yatai" class="maptemp">
+                        <div class="map_headline" ><h1><span class="Dnumber">1</span>　屋外</h1></div>
+                        <img src="./image/屋台.jpg" alt="" >
+                        <ol id="outside">
+                            <li id="n1"><a href="#m1">カルスト珈琲</a></li>
+                            <li id="n2"><a href="#m2">フルーツキャンデーランド</a></li>    
+                            <li id="n3"><a href="#m3">WoodStock</a></li>    
+                            <li id="n4"><a href="#m4">タイ焼きショップスイミー</a></li>    
+                            <li id="n5"><a href="#m5">JK-café</a></li>    
+                            <li id="n6"><a href="#m6">豆屋２</a></li>    
+                            <li id="n7"><a href="#m7">Suzuki Lab</a></li>    
+                            <li id="n8"><a href="#m8">らあめん屋猛拳</a></li>    
+                            <li id="n9"><a href="#m9">#高専ワッフル</a></li>    
+                            <li id="n10"><a href="#m10">International kitchen</a></li>
+                            <li id="n11"><a href="#m11">高梨のホットドッグ屋さん</a></li>
+                            <li id="n12"><a href="#m12">米屋のカレーライス</a></li>    
+                            <li id="n13"><a href="#m13">スイーツコンシェルジュが創るフレンチトースト</a></li>    
+                            <li id="n14"><a href="#m14">うちやなげやたのしめや 射的＆輪投げ</a></li>    
+                            <li id="n15"><a href="#m15">総合技研部 5-inch GaugeProject</a></li>    
+                            <li id="n41"><a href="#m41">ダンス部公演</a></li>
+                            <li id="n42"><a href="#m42">よさこい演舞</a></li>      
+                            
+                        </ol>
+                    </div>
+                    
+                    <div id="senkouka1" class="maptemp">
+                        <div class="map_headline" ><h1><span class="Dnumber">2</span>　専攻科・教育棟１階</h1></div>
+                        <img src="./image/専攻科１階.jpg" alt="">
+                        <ol>
+                                <li id="n20"><a href="#m20">OBO-TAPI：講義室 2</a></li>
+                                <li id="n21"><a href="#m21">アトリエひまわり</a></li>
+                                <li id="n22"><a href="#m22">ガンプラ展示会：講義室 1</a></li>
+                                <li id="n29"><a href="#m29">高専ロボコン参加ロボットの実演</a></li>
+                        </ol>
+                    </div>
+                    
+                    <div id="senkouka2" class="maptemp">
+                        <div class="map_headline"><h1>　専攻科・教育棟２階</h1></div>
+                        <img src="./image/専攻科２階.jpg" alt="">
+                        <ol>
+                                
+                                <li id="n25"><a href="#m25">頭文字 K</a></li>
+                                <li id="n292"><a href="#m29">高専ロボコンの体験型ゲーム</a></li>
+                                <li id="n30"><a href="#m30">かがくであそぼ</a></li>
+                        </ol>
+                    </div>
+                    <div id="senkouka3" class="maptemp">
+                        <div class="map_headline"><h1>　専攻科・教育棟３階</h1></div>
+                        <img src="./image/専攻科３階.jpg" alt="">
+                        <ol>
+                                
+                                <li id="n34"><a href="#m34">教育研究振興会</a></li>
+                                <li id="n35"><a href="#m35">後援会</a></li>
+                                <li id="n36"><a href="#m36">学校説明会</a></li>
+                        </ol>
+                    </div>
+                    <div id="kyouikuka1" class="maptemp">
+                        <div class="map_headline" ><h1><span class="Dnumber">3</span>　管理・教育棟１階</h1></div>
+                        <img src="./image/教育科棟１階.jpg" alt="">
+                        <ol>
+                                <li id="n17"><a href="#m17">マッチョ BAR</a></li>
+                                <li id="n18"><a href="#m18">喫茶処ちゃぐまっちゃ</a></li>
+                                <li id="n28"><a href="#m28">電算部ゲーム・デジタルアート展</a></li>
+                                <li id="n33"><a href="#m33">バザー</a></li>
+                                <li id="n39"><a href="#m39">化学・バイオ系展示</a></li>
+                                
+                        </ol>
+                    </div>
+                    <div id="kyouikuka2" class="maptemp">
+                        <div class="map_headline"><h1>　管理・教育棟２階</h1></div>
+                        <img src="./image/教育科棟２階.jpg" alt="">
+                        <ol>
+                                <li id="n16"><a href="#m16">カフェ Lab</a></li>
+                                <li id="n19"><a href="#m19">ITs</a></li>
+                                <li id="n27"><a href="#m27">昔ばなし「桃太郎」</a></li>
+                                <li id="n32"><a href="#m32">海外研修・派遣報告展示</a></li>
+                                <li id="n37"><a href="#m37">機械・知能系展示</a></li>
+                                <li id="n38"><a href="#m38">電気・電子系展示</a></li>
+                                
+                                
+                        </ol>
+                    </div>
+                    <div id="kyouikuka3" class="maptemp">
+                        <div class="map_headline"><h1>　管理・教育棟３階</h1></div>
+                        <img src="./image/教育科棟３階.jpg" alt="">
+                        <ol>
+                                <li id="n23"><a href="#m23">倶楽部麻沙美</a></li>
+                                <li id="n24"><a href="#m24">3C お化け屋敷</a></li>
+                                <li id="n26"><a href="#m26">写真館 Fixious</a></li>
+                                <li id="n31"><a href="#m31">総合科学領域展示</a></li>
+                                <li id="n382"><a href="#m38">電気・電子系展示</a></li>
+                        </ol>
+                    </div>
+                    <div id="taiiku1" class="maptemp">
+                        <div class="map_headline" ><h1><span class="Dnumber">4</span>　体育館</h1></div>
+                        <img src="./image/28da.jpg" alt="">
+                        <ol>
+                            <li id="n40"><a href="#m40">NITIC BRASS BAND CONCERT</a></li>
+                            <li id="n43"><a href="#m43">カラオケ大会</a></li>
+                            <li id="n44"><a href="#m44">高専祭ライブ</a></li>
+                        </ol>
+                        
+                        <img src="./image/29da.jpg" alt="" id="taiiku2">
+                        <ol>
+                            <li id="n412"><a href="#m41">ダンス部公演</a></li>
+                            <li id="n442"><a href="#m44">高専祭ライブ</a></li>
+                        </ol>
+                        
+                    </div>
                 </div>
                 <!-- 企画一覧のとき-->
                 <div class="screen_list pannel" id="list">
-                    Comming　Soon…
-                    <a href="./index.html" class="back_2">ホームに戻る</a>
+                    <div class="list_backgroud">
+                        <plan-list id="m1" imgurl="./image/kasusisu.png" genre="屋台・コーヒー" headline="①カルスト珈琲" text="コーヒー好きが提供する屋台企画「カルスト珈琲」散策や食事のお供に一杯いかがでしょうか<br>コーヒー（アイス／ホット）　150円<br>アイスカフェオレ　250円<br>大人のココア　250円" place="専攻科・教育棟前屋台" href="#n1"></plan-list>
+                        <plan-list id="m2" imgurl="./image/hurutu.jpg" genre="屋台・フルーツ飴" headline="②フルーツキャンデーランド" text="Yo, みんな！ヒカｷﾝがフルーツ飴をチェックしまくりの最新おいしさだぜ！これ、何を四天王！？ってくらいの美味しさなんだ！一口食べれば、その衝撃、もう忘れられねぇぜ！やぁりましょう！" place="専攻科・教育棟前屋台" href="#n2"></plan-list>
+                        <plan-list id="m3" imgurl="./image/wood.jpg" genre="屋台・クレープ" headline="③Wood Stock" text="バドミントン部今年もやります。甘くて美味しいクレープをぜひご賞味ください<br>クレープ全品250円！！<br>トッピング増量250円！！<br>今年は、高専のあちこちにクレープの精が出没します！" place="専攻科・教育棟前屋台" href="#n3"></plan-list>
+                        <plan-list id="m4" imgurl="./image/tai.jpeg" genre="屋台・たい焼き" headline="④タイ焼きショップスイミー" text="水泳部のたい焼き屋さんです‼︎<br>味は5種類、1個100円‼︎<br>個性豊かなめでたい売り子さんに出会えるかも⁉︎ご来店お待ちしております‼︎" place="専攻科・教育棟前屋台" href="#n4"></plan-list>
+                        <plan-list id="m5" imgurl="./image/jk.jpg" genre="屋台・ホットケーキ" headline="⑤JK-café" text="現役JK（情報系高専生）が調理するホットケーキを提供します！！<br>ホットケーキ300円、ジュース100円<br>愛情込めて作ってるのでおいしいですよぉ～" place="メディアセンター前屋台" href="#n5"></plan-list>
+                        <plan-list id="m6" imgurl="./image/touhgu.jpg" genre="屋台" headline="⑥豆屋２" text="女性割を提案したところ断られた空手部です…今まで一度も彼女が出来たことがありません!!!ひと夏の思い出としてたこ焼き400円、ウインナー焼き350円、チョコベビーカステラを250円で売らせていただきます!!!あ～、彼女欲し〜🥺" place="メディアセンター前屋台" href="#n6"></plan-list>
+                        <plan-list id="m7" imgurl="./image/SuzukiLab.png" genre="屋台・ジャンクフード" headline="⑦Suzuki Lab" text="Suzuki Labの屋台、人間工学のスペシャリストが手がける美味しいフライドポテト、チキンナゲット、そしてドリンクをお楽しみください。ポテトは250円～、ナゲット250円、ドリンク200円！お得な価格で、文化祭を彩ります！" place="メディアセンター前屋台" href="#n7"></plan-list>
+                        <plan-list id="m8" imgurl="./image/ramen.jpg" genre="屋台・ラーメン" headline="⑧らあめん屋猛拳" text="らあめん屋猛拳はこだわりの醤油ラーメンを提供します！ワンコイン一杯500円こだわりポイントは出汁！肉系出汁と魚介系出汁を合わせた柔道部が代々受け継いできたレシピです！最高の一杯を召し上がれ！！！" place="専攻科・教育棟前屋台" href="#n8"></plan-list>
+                        <plan-list id="m9" imgurl="./image/wa.png" genre="屋台・ワッフル" headline="⑨#高専ワッフル" text="ほーいいじゃないか、こういうのでいいんだよこういうので。この匂いたまらん。うまい、いかにもワッフルってワッフルだ。食欲がモリモリ湧いてくる。２００円でこの美味さ。うーん、期待を裏切らない味だ。" place="メディアセンター前屋台" href="#n9"></plan-list>
+                        <plan-list id="m10" imgurl="./image/inter.jpeg" genre="屋台・トムヤムクン" headline="International kitchen" text="一関高専の留学生（ペルー、モンゴル、マレーシア、ブラジル、ナイジェリア）と仲間たちがタイの郷土料理トムヤムクンを提供します。本格的な風味にみんなも虜になるはず！1杯250円～です。ぜひご賞味ください！" place="メディアセンター前屋台" href="#n10"></plan-list>
+                        <plan-list id="m11" imgurl="./image/hot.png" genre="屋台・ホットドッグ" headline="⑪高梨のホットドッグ屋" text="私たちは、ホットドッグやホイップパン、ドリンクを販売します！<br>⭐︎メニュー⭐︎（各トッピング＋50円）<br>ホットドッグ：300円　ホイップパン：250円　ソーセージ：150円　ドリンク：100円　ドリンク3回券：250円" place="専攻科・教育棟前屋台" href="#n11"></plan-list>
+                        <plan-list id="m12" imgurl="./image/yoneya.png" genre="屋台・カレー" headline="⑫米屋のカレーライス" text="新米を使用したカレーライスです。米の味を最大限活かすため各所と格闘しましたがレトルトカレーが限界だったんです。米はうまいです。" place="専攻科・教育棟前屋台" href="#n12"></plan-list>
+                        <plan-list id="m13" imgurl="./image/suitu.jpg" genre="展示・フレンチトースト" headline="⑬スイーツコンシェルジュが創るフレンチトースト" text="1個300円、2個ならなんと500円！<br>ふんわりとした食感と香り豊かなフレンチトーストをお楽しみ頂けます。お待ちしています！" place="専攻科・教育棟前屋台" href="#n13"></plan-list>
+                        <plan-list id="m14" imgurl="./image/utia.jpg" genre="屋台・体験" headline="⑭うちやなげやたのしめや 射的＆輪投げ" text="キミならどの景品を狙う？1回300円でここだけの豪華な景品が手に入るチャンス！参加者全員に必ず景品プレゼント。射的と輪投げでキミの腕前を試してみよう！子どもから大人まで！待ってます！" place="メディアセンター前屋台" href="#n14"></plan-list>
+                        <plan-list id="m15" imgurl="./image/dden.jpg" genre="体験" headline="⑮総合技研部 5-inch GaugeProject" text="毎年恒例5インチゲージ乗車体験です！今年はTGC teen ichinosekiにも出展しました。無料で乗車できるので、ぜひ一度乗ってみてください！" place="専攻科・教育棟前" href="#n15"></plan-list>
+                        <plan-list id="m16" imgurl="./image/lab-1.png" genre="カフェ" headline="⑯カフェ Lab" text="食×サイエンス×エンターテイメントのてんこもりカフェです☕️お腹も心も満たされる実験場にご案内します！！楽しすぎてごめんなサイエンス🧪🔬みなさんのご来店おまちしてます！" place="管理・教育棟２階" href="#n16"></plan-list>
+                        <plan-list id="m17" imgurl="./image/masru.jpg" genre="カフェ" headline="⑰マッチョ BAR" text="マッチョ達が復活！フラペチーノ￥500、シェイク￥500、プロテインバー￥300を摂取して、体も心もパンプアップ！マッチョ以外は入れない？ウソ、男女問わずみんなウェルカム！あなたはどのマッチョが好き？" place="管理・教育棟１階" href="#n17"></plan-list>
+                        <plan-list id="m18" imgurl="./image/thgu.png" genre="お茶所" headline="⑰喫茶処ちゃぐまっちゃ" text="甘みがやや強めで飲みやすい、高級宇治抹茶「小倉山」を使用しています。かぼちゃの甘みを餡にして包んだかぼちゃ饅頭と、絶妙な塩加減がポイントの豆大福を提供させていただきます。 " place="管理・教育棟１階" href="#n18"></plan-list>
+                        <plan-list id="m19" imgurl="./image/its.jpeg" genre="展示" headline="⑲ITs" text="とっても楽しい体験展示会です" place="管理・教育棟２階" href="#n19"></plan-list>
+                        <plan-list id="m20" imgurl="./image/obo.jpg" genre="カフェ" headline="⑳OBO-TAPI" text="OBO-TAPIでは最新JKが考えた映えのフラペチーノと今、韓国で熱いクロッフル！！インスタに載せていいね❤️稼ぐならここしかないっしょ！小保方先生の愛こもってます❤️それでは一緒にせーのっ！オボタッピ！" place="専攻科・教育棟１階" href="#n20"></plan-list>
+                        <plan-list id="m21" imgurl="./image/atorie.png" genre="展示" headline="㉑アトリエひまわり" text="部員の油彩画、デッサン等の作品を展示しています。合同誌や手作りアクセサリーも販売しているので是非お越しください。落書きコーナーがあります" place="専攻科・教育棟１階" href="#n21"></plan-list>
+                        <plan-list id="m22" imgurl="./image/gan.jpg" genre="展示" headline="㉒ガンプラ展示会" text="ガンダム、飾るよ！(多分)高専一のガンプラマニアが主催するガンプラの展示会が専攻科・教育棟1F 講義室1にて開催。閲覧無料。昔のガンプラから最新のガンプラまで、様々な作品を展示するので是非見に来てください！" place="専攻科・教育棟１階" href="#n22"></plan-list>
+                        <plan-list id="m23" imgurl="./image/masami.jpg" genre="喫茶" headline="㉓倶楽部麻沙美" text="誰でも入れる'カワイイ'がテーマのオカマ喫茶よ♡4年ぶりの復活でオカマ達み～んな張り切ってるの！写真を撮ったりドリンクを飲みながらたくさんお話しましョ😘webでオカマ達を紹介してるからチェックシテね♡" place="管理・教育棟３階" href="#n23"></plan-list>
+                        <plan-list id="m24" imgurl="./image/kubi.png" genre="体験" headline="㉔3C お化け屋敷" text="フハハハ。この我の所属するお化け屋敷にて恐怖を享受できるのだ、光栄に思えよ雑種。一回３００円とまあお高めだが、人件費と設備費が嵩んでいる、怖くなくとも怖がってやれ。管理棟 3 階に疾く来い。飴ちゃんをやろう。by.お化け" place="管理・教育棟３階" href="#n24"></plan-list>
+                        <plan-list id="m25" imgurl="./image/zidou.png" genre="体験" headline="㉕頭文字 K" text="ドライビングシミュレータ体験と学生フォーミュラマシンの写真撮影ができます！シミュレータは200円、写真撮影は無料です。限界を目指して走れ！！" place="専攻科・教育棟２階" href="#n25"></plan-list>
+                        <plan-list id="m26" imgurl="./image/syasin.png" genre="展示" headline="㉖写真館 Fixious" text="高専祭の思い出写真に残しませんか？かわいいフォトブース準備してます！！大好きな人たちと一緒に最高の思い出残しましょう！鏡、ヘアアイロン貸出あり✩彡入場料200円  チェキ200円からですお待ちしています♡︎" place="管理・教育棟３階" href="#n26"></plan-list>
+                        <plan-list id="m27" imgurl="./image/sand.png" genre="展示" headline="㉗昔ばなし「桃太郎」" text="サンドボックスプロジェクトです！私たちは Minecraft を使って、コマンドや3Dテクスチャ、編集技術などといったそれぞれの得意分野を活かし、昔ばなし「桃太郎」を再現した映像作品を作りました！ぜひお越しください！" place="管理・教育棟２階" href="#n27"></plan-list>
+                        <plan-list id="m28" imgurl="./image/posta.jpg" genre="展示" headline="㉘電算部ゲーム・デジタルアート展" text="電子計算機部が手がけたゲームとCGアートを展示中！未知の冒険とデジタルの夢、お楽しみください。" place="管理・教育棟１階" href="#n28"></plan-list>
+                        <plan-list id="m29" imgurl="./image/robo.png" genre="体験" headline="㉙高専ロボコンによる体験と実演" text="ロボコンのロボットが目の前で動く！！無料で見れる。さらに一年生のみで作ったロボットの体験型ゲームもあるよ。こっちは1プレイ50円！戦績次第でお菓子ゲット！" place="専攻科・教育棟１階と２階" href="#n29"></plan-list>
+                        <plan-list id="m30" imgurl="./image/kakga.jpg" genre="体験" headline="㉚かがくであそぼ" text="今年は最近話題のダイラタンシー現象を無料で体験できるコーナーがあるよ！「なぜなに」があったら気軽に言ってね！スタッフがすっきり解決！" place="専攻科・教育棟２階" href="#n30"></plan-list>
+                        <plan-list id="m31" imgurl="./image/sougou.png" genre="展示" headline="㉛総合科学領域展示" text="科学を楽しんでいただくため、パズルや不思議な科学おもちゃをたくさん用意しました。誰でも自由に触って楽しむことができます。是非、立ち寄ってみてください。" place="専攻科・教育棟３階" href="#n31"></plan-list>
+                        <plan-list id="m32" imgurl="./image/kaigai.png" genre="展示" headline="㉜海外研修・派遣報告展示" text="2023年度に海外研修、協定校派遣に参加した学生たちによる報告ポスターを展示しています。渡航先はシンガポールタイ、台湾、フランスです。本学のグローバルな側面と学生の海外経験と成長の記録をぜひご覧ください。" place="管理・教育棟２階" href="#n32"></plan-list>
+                        <plan-list id="m33" imgurl="./image/baza.png" genre="バザー" headline="㉝バザー" text="今年の高専祭の目玉のひとつである「バザー」…数々出品された商品のなかで普段お目にかかれない掘り出し物があるかも！？安い値段で商品の購入し、募金できる機会なのでみなさんぜひ寄ってみてください！！" place="管理・教育棟１階" href="#n33"></plan-list>
+                        <plan-list id="m34" imgurl="./image/sinkou.png" genre="領域展示" headline="㉞教育研究振興会" text="⼀関⾼専教育研究振興会は、本校の教育研究の振興を図り⾼専と企業間の連携を密にし、地域社会の発展に資することを⽬的として設⽴された団体です。来場者には数量限定グッズをプレゼント！ぜひブースにお⽴ち寄りください！" place="専攻科・教育棟３階" href="#n34"></plan-list>
+                        <plan-list id="m35" imgurl="./image/kouen.png" genre="展示・カフェ" headline="㉟後援会" text="絶品の「高専まんじゅう」を食べながら高専について語り合いませんか？高専についての展示コーナーや相談もできる純喫茶【後援会】にてお待ちしております。" place="専攻科・教育棟３階" href="#n35"></plan-list>
+                        <plan-list id="m36" imgurl="./image/setumei.png" genre="説明会" headline="㊱学校説明会" text="「一関高専」という選択で未来への扉を開こう！一関高専の多彩なカリキュラムや教育方針などについての説明をします！お気軽にお立ち寄りいただき、当校の教育についてお話ししましょう！" place="専攻科・教育棟３階" href="#n36"></plan-list>
+                        <plan-list id="m37" imgurl="./image/Mkei.png" genre="展示" headline="㊲機械・知能系展示" text="見て、ふれて。機械と知能の世界を感じてください。展示やモノづくり体験カリキュラムの紹介をしています！" place="管理・教育棟１階と２階" href="#n37"></plan-list>
+                        <plan-list id="m38" imgurl="./image/Ekei.png" genre="展示" headline="㊳電気・電子系展示" text="電気のおもしろさを伝える展示ということで「静電気や放電現象の展示」「超伝導現象のデモ」「光通信のデモ」などロボットやパワーエレクトロニクスの研究ブースやってます。" place="管理・教育棟１階" href="#n38"></plan-list>
+                        <plan-list id="m39" imgurl="./image/Ckei.png" genre="展示" headline="㊴化学・バイオ系展示" text="化学・バイオ系では、“閉鎖循環式陸上養殖”で、海洋性の魚介類を育てることができるプロジェクトをご紹介！さらに、私たち高専の得意分野である低コスト化に貢献するＤＸ技術の展示や実演も行います！" place="管理・教育棟２階" href="#n39"></plan-list>
+                        <plan-list id="m40" imgurl="./image/keion.png" genre="公演" headline="㊵NITIC BRASS BAND CONCERT" text="NITIC BRASS BAND CONCERT がやってくる！熱い演奏とエネルギッシュなステージで、みんなを魅了するぞ！話題の曲から定番曲まで、吹奏楽部が繰り広げる大迫力のパフォーマンスを楽しんでね！" place="第二体育館" href="#n40"></plan-list>
+                        <plan-list id="m41" imgurl="./image/danc.png" genre="公演" headline="㊶ダンス部公演" text="今年開催されたTGC teen 一関で披露した曲も踊ります!ダンス動画はダンス部のインスタに投稿されてるから覚えて一緒に踊ってみよう！" place="第一体育館" href="#n41"></plan-list>
+                        <plan-list id="m42" imgurl="./image/yosa.jpg" genre="公演" headline="㊷よさこい演舞" text="一関高専よさこいチーム舞童です！メンバーの笑顔と活気溢れる躍りで皆さんに楽しんでいただけるよう、精一杯踊らせていただきますのでご声援の程よろしくお願いします！" place="第一体育館" href="#n42"></plan-list>
+                        <plan-list id="m43" imgurl="./image/kara.png" genre="公演" headline="㊸カラオケ大会" text="今年度のカラオケ大会王者の座は誰の手に！？※中夜祭で行うため本校学生以外の方はご覧いただけません" place="第一体育館" href="#n43"></plan-list>
+                        <plan-list id="m44" imgurl="./image/keikie.jpg" genre="公演" headline="㊹高専祭ライブ" text="過去最強の音響とノリでお送りします!ぜひお越しください♪<br><a href='https://nitickeion.notion.site/34c97ce7d24f4953a94b96908b3a50c0' style='color:blue'>ライブスケジュールはこちら！<a>" place="第一体育館" href="#n44"></plan-list>
+                    </div>
+                    
                 </div>
                 
     </article>
@@ -88,8 +254,8 @@
                 <li><a href="index.html">ホーム</a></li>
                 <li><a href="plan.html">企画一覧</a></li>
                 <li><a href="https://www.ichinoseki.ac.jp/">一関高専HP</a></li>
-                <li><a href="https://twitter.com/gakusei_kosen?s=20" style="border-bottom: none;"><img src="./image/X.jpg" alt="X（旧twitter）"></a></li>
-                <li><a href="https://www.instagram.com/nitic_gakuseikai/" style="border-bottom: none;"><img src="./image/insuta.png" alt="Instagram"></a></li>
+                <li><a href="https://twitter.com/gakusei_kosen?s=20" >X（旧twitter）</a></li>
+                <li><a href="https://www.instagram.com/nitic_gakuseikai/">instagram</a></li>
             </ul>
             <div class="address">
                 <div class="logo-ft" style="height: 80px;">
@@ -116,4 +282,3 @@
     <script src="plan.js"> </script>
 </body>
 </html>
-
